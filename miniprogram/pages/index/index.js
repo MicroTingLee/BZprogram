@@ -3,24 +3,14 @@ const app = getApp()
 
 Page({
   data: {
-    // avatarUrl: './user-unlogin.png',
-    // userInfo: {},
-    // logged: false,
-    // takeSession: false,
-    // requestResult: ''
-    //判断小程序的API，回调，参数，组件等是否在当前版本可用。
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    isHide:false
+    isHide:true,
+    gappid: 'wx1d1dd19a8bdd9770',
+    gsecret:'539d35d13c8f6bca5a61b0f7545d52df',
   },
 
   onLoad: function() {
-    // if (!wx.cloud) {
-    //   wx.redirectTo({
-    //     url: '../chooseLib/chooseLib',
-    //   })
-    //   return
-    // }
-
+   
     // 获取用户信息
     wx.getSetting({
       success: res => {
@@ -34,7 +24,19 @@ Page({
               })
               wx.login({
                 success:res=>{
+                  var appid = this.data.gappid
+                  var secret = this.data.gsecret
+                  var code=res.code
                   console.log("用户的code:"+res.code)
+                  wx.request({
+                    url: 'https://mcs.lingdie.com/wechat/Basicset/nihao?id=' + appid + '&js=' + res.code + '&se=' + secret,
+                    method: 'post',     
+                    success: res => {
+                      console.log(res)
+                      console.log(res.data.openid,'8000')
+                                        }
+                                    });
+
                 }
               })
             }

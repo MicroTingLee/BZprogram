@@ -1,0 +1,6 @@
+<!--pages/car/car.wxml-->
+<view class='container'>
+    <view class='car'>
+        
+    </view>
+</view>

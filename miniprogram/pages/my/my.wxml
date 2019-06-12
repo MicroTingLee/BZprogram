@@ -1,0 +1,108 @@
+<!--pages/my/my.wxml-->
+<view class='container'>
+    <view class='my'> 
+    <!-- 头部 -->
+          <view class='myhead' style="background:url('../../images/grback.png');bakcground-repeat:no-repeat;background-size:100% 100%;background-position:center;">
+              <image class='mytouxiang' src='../../images/tx.png'></image>
+              <view class='myheadbox'>
+                  <text class='myusename'>开</text>
+                  <view class='myrank'>
+                      <view class='membershiprank common'>
+                          <text class='iconfont icon-huangguan'></text>
+                          <text class='rktxt'>报账会员</text>
+                      </view>
+                      <view class='membershiprank glodcard'>
+                         <text class='iconfont icon-huangguan'></text>
+                          <text class='rktxt'>金卡会员</text>
+                      </view>
+                      <view class='membershiprank crowdfunding'>
+                           <text class='iconfont icon-huangguan'></text>
+                          <text class='rktxt'>众筹会员</text>
+                      </view>
+                  </view>
+              </view>
+          </view>
+    <!-- 头部底部 -->
+          <view class='headbottom1'>
+             <view class='headbtleft'>
+                <text class='bttext daidui'>0.00</text>
+                <navigator>待兑额</navigator>
+             </view>
+             <view class='headbtright'>
+                <text class='bttext experience'>0</text>
+                <navigator>经验值</navigator>
+             </view>
+          </view>
+          <view class='headbottom2'>
+              <navigator>
+                  <text class='iconfont icon-tuandui'></text>
+                  <text class='hehuo'>合伙人计划</text>
+                  <text class='tequan'>参与尊享10大特权</text>
+              </navigator>
+          </view>
+          <!-- 订单部分 -->
+          <view class='myorder'>
+              <view class='myordername'>
+                  <text>我的订单</text>
+              </view>
+              <view class='myorderbox'>
+                  <navigator>
+                        <view class='zhifupic' style='background:url("../../images/dzf.png") no-repeat center;background-size:100% 100%;'></view>
+                        <text class='myordertxt'>待支付</text>
+                  </navigator>
+                  <navigator>
+                        <view class='myorderpic' style='background:url("../../images/ywc.png") no-repeat center;background-size:100% 100%;'></view>
+                        <text class='myordertxt'>我的订单</text>
+                  </navigator>
+              </view> 
+          </view>
+          <!-- 我的报账部分 -->
+          <view class='mybaozhang'>
+              <view class='myordername'>
+                  <text>我的报账</text>
+              </view>
+              <view class='mybzbox'>
+                  <navigator>
+                      <view class='mybzpic' style='background:url("../../images/gr1.png") no-repeat center;background-size:100% 100%;'></view>
+                      <text class='bztxt'>报账进度</text>
+                  </navigator>
+                  <navigator>
+                      <view class='mybzpic' style='background:url("../../images/gr7.png") no-repeat center;background-size:100% 100%;' ></view>
+                      <text class='bztxt'>报账成功</text>
+                  </navigator>
+                  <navigator>
+                      <view class='mybzpic' style='background:url("../../images/gr10.png") no-repeat center;background-size:100% 100%;'></view>
+                      <text class='bztxt'>报账加速</text>
+                  </navigator>  
+              </view>
+          </view>
+          <!-- 常用功能 -->
+          <view class='commonfunctions'>
+              <view class='myordername'>
+                  <text>常用功能</text>
+              </view>
+              <view class='functionbox'>
+                  <navigator>
+                      <view class='fcpic' style='background:url("../../images/gr2.png") no-repeat center;background-size:100% 100%;'></view>
+                      <text class='fctxt'>我的好友</text>
+                  </navigator>
+                  <navigator>
+                      <view class='fcpic' style='background:url("../../images/gr3.png") no-repeat center;background-size:100% 100%;'></view>
+                      <text class='fctxt'>券款兑换</text>
+                  </navigator>
+                  <navigator>
+                      <view class='fcpic' style='background:url("../../images/dhmx.png") no-repeat center;background-size:100% 100%;'></view>
+                      <text class='fctxt'>兑换明细</text>
+                  </navigator>
+                  <navigator>
+                      <view class='fcpic' style='background:url("../../images/yhangk.png") no-repeat center;background-size:100% 100%;'></view>
+                      <text class='fctxt'>我的银行卡</text>
+                  </navigator>
+                  <navigator>
+                      <view class='fcpic'style='background:url("../../images/grphone.png") no-repeat center;background-size:100% 100%;'></view>
+                      <text class='fctxt'>绑定手机</text>
+                  </navigator>
+              </view>
+          </view>
+    </view>
+</view>
