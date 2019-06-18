@@ -1,0 +1,35 @@
+<!--pages/shangcheng/shangcheng.wxml-->
+<template name="shangcheng">
+  <view class='shangc'>
+    <view class='head'>
+      <view class='img'>
+        <image src='../../images/sy.png'></image>
+      </view>
+      <text class='sear'>待付款订单为您保留至当日晚上24时</text>
+    </view>
+    <!-- 动态数据开始 -->
+    <view class='sc_card'>
+      <image src='../../images/suc.jpg' class='tx'></image>
+      <view class='sc_odd'>
+        <view class='danh'>单号:
+          <text>482</text> </view>
+        <view class='shangp'>商品×
+          <text>1</text>
+        </view>
+        <view class='wuy'>吾悦店</view>
+      </view>
+      <!-- 时间，合计 -->
+      <view class='price'>
+        <view class='shij'>2019-06-13 16:00</view>
+        <view class='hej'>合计：
+          <text>1000:00
+         </text> </view>
+      </view>
+      <!-- 按钮  -->
+      <view class='btn'>
+       <view class='fuk'>付款</view>
+       <view class='del'>删除订单</view>
+      </view>
+    </view>
+  </view>
+</template>

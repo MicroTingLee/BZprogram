@@ -4,43 +4,27 @@ const app = getApp()
 Page({
   data: {
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    isHide:true,
-    gappid: 'wx1d1dd19a8bdd9770',
-    gsecret:'539d35d13c8f6bca5a61b0f7545d52df',
+    isHide:'',
+    information:'',
+    lgcode:'',
+    paom:[],
+    totalmoney:'',
+    totalsuccess:'',
+    totalspeedup:'',
+    store1:[],
+    vertical: true,
+    autoplay: true,
+    interval: 3000,
+    duration: 1000,
+    circular: true
   },
-
   onLoad: function() {
-   
     // 获取用户信息
     wx.getSetting({
       success: res => {
         if (res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-          wx.getUserInfo({
-            success: res => {
-              this.setData({
-                avatarUrl: res.userInfo.avatarUrl,
-                userInfo: res.userInfo
-              })
-              wx.login({
-                success:res=>{
-                  var appid = this.data.gappid
-                  var secret = this.data.gsecret
-                  var code=res.code
-                  console.log("用户的code:"+res.code)
-                  wx.request({
-                    url: 'https://mcs.lingdie.com/wechat/Basicset/nihao?id=' + appid + '&js=' + res.code + '&se=' + secret,
-                    method: 'post',     
-                    success: res => {
-                      console.log(res)
-                      console.log(res.data.openid,'8000')
-                                        }
-                                    });
-
-                }
-              })
-            }
-          })
+          console.log('789')
+         this.paoma()
         }else{
           this.setData({
             isHide:true
@@ -50,6 +34,35 @@ Page({
     })
   },
 
+paoma:function(){
+  var token=app.globalData.token
+  var cardnum = app.globalData.cardnum
+  console.log(token,'8989')
+  console.log(cardnum,'77777')
+  wx.request({
+  url: 'https://mcs.lingdie.com/wechat/bzhomexcx/integration',
+  method:'POST',
+  data:{
+    token:token,
+    cardnum:cardnum
+  },
+  header: {
+    'content-type': 'application/json' //默认值
+  },
+  success:res=>{
+    console.log(res.data)
+    console.log(res.data.paomao,'111')
+    this.setData({
+      paom: res.data.paomao,
+      totalmoney: res.data.total_addup,
+      totalsuccess: res.data.total_win,
+      totalspeedup: res.data.total_speedup,
+      store1:res.data.store,
+    })
+  }
+})
+},
+// 点击授权 获取unionid后把token等信息传给后台
   bindGetUserInfo:function(e){
     if (e.detail.userInfo) {
       //用户按了允许授权按钮
@@ -61,6 +74,76 @@ Page({
       that.setData({
         isHide: false
       });
+      wx.getUserInfo({
+        success: res => {
+          var encryptedData = res.encryptedData
+          var iv = res.iv
+          var gappid = app.globalData.gappid
+          var session_key = wx.getStorageSync('session_key')
+          wx.request({
+            url: 'https://mcs.lingdie.com/wechat/Basicset/shouquan',
+            method:'get',
+            data:{
+              id:gappid,
+              session_key:session_key,
+              encryptedData: encryptedData,
+              iv: iv
+            },
+            header: {
+              'content-type': 'application/json' //默认值
+            },
+            success:res=>{
+              console.log(res.data,'index')
+              var allinformations=JSON.parse(res.data)
+              console.log(allinformations,'allinformations')
+              allinformations.token=app.globalData.token
+              this.setData({
+                information: allinformations
+              })
+              wx.setStorageSync('allinformation', allinformations);
+              wx.request({
+                url: 'https://mcs.lingdie.com/wechat/Bzegisterxcx/ruku',
+                method: 'POST',
+                data: allinformations,
+                header: {
+                  'content-type': 'application/json' //默认值
+                },
+                success: res => {
+                  console.log(res.data.code, 99999999)
+                  this.paoma()
+                },
+                fail:res=>{
+                  console.log('传给后台信息失败！')
+                }
+              })
+            },
+            fail:res=>{
+              console.log('获取u失败！')
+            }
+          })
+          // this.setData({
+          //   avatarUrl: res.userInfo.avatarUrl,
+          //   userInfo: res.userInfo
+          // })
+          // wx.login({
+          //   success: res => {
+          //     var appid = this.data.gappid
+          //     var secret = this.data.gsecret
+          //     var code = res.code
+          //     console.log("用户的code:" + res.code)
+          //     wx.request({
+          //       url: 'https://mcs.lingdie.com/wechat/Basicset/nihao?id=' + appid + '&js=' + res.code + '&se=' + secret + '&encryptedData=' + encryptedData + '&iv=' + iv,
+          //       method: 'post',
+          //       success: res => {
+          //         console.log(res)
+          //         // console.log(res.data.openid,'8000')
+          //       }
+          //     });
+
+          //   }
+          // })
+        }
+      })
     } else {
       //用户按了拒绝按钮
       wx.showModal({

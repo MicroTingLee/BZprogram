@@ -1,0 +1,28 @@
+<!--pages/poster/poster.wxml-->
+ <!-- 邀请函 -->
+    <view class='body'>
+      <view class='head'></view>
+      <view class='ewm'></view>
+      <view class='bottom'>
+        <view class="haibao_tu">
+          <image src="../../images/changtiao.png" class='hx' />
+          <text>参与步骤</text>
+          <image src="../../images/changtiao.png" class='hx' />
+        </view>
+        <view class='lists'>
+          <image src='https://yx.lingdie.com/images/image_app/style1/baoming.png' class='lis'></image>
+          <image src='../../images/jt.png' class='jt'></image>
+          <image src='https://yx.lingdie.com/images/image_app/style1/maika.png' class='lis'></image>
+          <image src='../../images/jt.png' class='jt'></image>
+          <image src='https://yx.lingdie.com/images/image_app/style1/daodianxiaofei.png' class='lis'></image>
+          <image src='../../images/jt.png' class='jt'></image>
+          <image src='https://yx.lingdie.com/images/image_app/style1/paidui.png' class='lis'></image>
+        </view>
+        <view class='li_txt'>
+          <text class='text'>立即报名</text>
+          <text class='text'>购买报账卡</text>
+          <text class='text'>到店消费</text>
+          <text class='text'>排队报账</text>
+        </view>
+      </view>
+    </view>

@@ -1,0 +1,33 @@
+<!--pages/mybzsuccess/mybzsuccess.wxml-->
+<!--我的页 报账成功-->
+<view class='success'>
+  <view class='data'>
+    <view class='img'>
+      <image src='../../images/suc.jpg'></image>
+    </view>
+    <!-- 用户信息 -->
+    <view class='user'>
+      <view class='name'>
+        <image src='../../images/js03.png'></image>
+        <text>2019-06-03 11:50:54</text>
+      </view>
+      <view class='name'>
+        <image src='../../images/bt.png'></image>
+        <text>普通报账</text>
+      </view>
+      <view class='name'>
+        <image src='../../images/js05.png' class='dp'></image>
+        <text>吾悦店</text>
+      </view>
+    </view>
+    <view class='time'>
+      <view class='shij'></view>
+      <view class='quan'>
+        <view class='quan'>
+          <image src='../../images/quan.png'></image>
+          <view class='yhq'>1000元</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

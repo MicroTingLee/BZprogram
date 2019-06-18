@@ -1,0 +1,76 @@
+/* pages/mybzsuccess/mybzsuccess.wxss */
+.success {
+  width: 750rpx;
+}
+
+.success .data {
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  border-bottom: 1rpx solid #eee;
+}
+
+.data .img {
+  width: 140rpx;
+  height: 120rpx;
+}
+
+.img image {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 10rpx;
+  margin-top: 25rpx;
+}
+
+.data .user {
+  width: 60%;
+  height: 150rpx;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}
+
+.user .name {
+  width: 100%;
+  font-size: 31rpx;
+  color: #333;
+  display: flex;
+  margin-top: 5rpx;
+}
+
+.name image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-top: 5rpx;
+}
+
+.name text {
+  display: block;
+  padding-left: 5rpx;
+  margin-top: 3rpx;
+
+}
+.time{
+  width: 30%;
+  font-size: 30rpx;
+  margin-left: 10rpx;
+  margin-top: 20rpx;
+
+}
+.time .shij{
+ text-align: center;
+}
+.time .quan{
+  width: 300rpx;
+margin-left:10rpx; 
+display: flex;
+}
+.quan image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 15rpx;
+}
+.quan .yhq{
+  margin-top: 15rpx;
+  margin-left: 10rpx;
+  color: red;
+}

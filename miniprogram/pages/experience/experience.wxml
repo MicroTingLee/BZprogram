@@ -1,0 +1,47 @@
+<!--pages/experience/experience.wxml-->
+<!--经验值-->
+    <view class='empirical'>
+      <view class='top'>
+        <image src='../../images/jinyanbj.png'></image>
+      </view>
+      <view class='em_card'>
+        <view class='left'>
+          <view class='zshu'>500.00</view>
+          <view class='zs_txt'>总数</view>
+        </view>
+        <view class='center'>
+          <image src='../../images/zs.png'></image>
+        </view>
+        <view class='left'>
+          <view class='zshu'>450</view>
+          <view class='zs_txt'>剩余</view>
+        </view>
+      </view>
+      <view class='btn'>
+        <buttton class='jiaos' bindtap='show'>加速报账</buttton>
+        <navigator class='zqu' url='../poster/poster'>立即赚取经验值</navigator>
+      </view>
+    </view>
+    <!-- 弹窗 -->
+    <view>
+      <view class="zhezao" hidden="{{flag}}">
+        <view class="t_w">
+          <!--取消图标开始-->
+          <view class="t_image" bindtap="conceal">
+            <image class="t_image1" src="../../images/cha.png"></image>
+          </view>
+          <!--取消图标结束-->
+          <!--弹出框开始-->
+          <view class="tanchu_view">
+            <view>
+              <!--抱歉开始-->
+              <view class="txtsure">
+              </view>
+              <!--抱歉结束-->
+              <view class='txt'>经验值不足，无法兑换</view>
+            </view>
+          </view>
+          <!--弹出框结束-->
+        </view>
+      </view>
+    </view>

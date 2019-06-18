@@ -1,0 +1,161 @@
+/* pages/experience/experience.wxss */
+.empirical {
+  width: 100%;
+}
+
+.empirical .top {
+  width: 100%;
+}
+
+.top image {
+  width: 100%;
+  height: 320rpx;
+}
+
+.em_card {
+  width: 95%;
+  height: 200rpx;
+  background: #fff;
+  position: absolute;
+  left: 20rpx;
+  top: 260rpx;
+  box-shadow: darkgrey 0 0 15px 0;
+  border-radius: 20rpx;
+  display: flex;
+}
+
+.em_card .left, .center, .right {
+  width: 33%;
+  height: 180rpx;
+  text-align: center;
+  margin-top: 10rpx;
+  font-size: 33rpx;
+}
+
+.left .zshu {
+  padding: 25rpx;
+  font-size: 42rpx;
+}
+
+.center image {
+  width: 95rpx;
+  height: 110rpx;
+  margin-top: 25rpx;
+}
+
+.btn {
+  width: 100%;
+  position: absolute;
+  bottom: 10rpx;
+  display: flex;
+}
+
+.btn .jiaos, .zqu {
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  color: #fff;
+  border-radius: 10rpx;
+}
+
+.btn .jiaos {
+  width: 45%;
+  background: rgb(250, 128, 184);
+}
+
+.btn .zqu {
+  width: 55%;
+  background: rgb(64, 220, 207);
+}
+/* 弹窗 */
+/* .zhezao {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  background: rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+.tanchu_view {
+  width: 90%;
+  margin: 40% auto 0;
+  background: url(https://mcs.lingdie.com/static/wechat/images/jxtc.png) no-repeat;
+  background-size: 100% 100%;
+  height: 500rpx;
+  border-radius: 10rpx;
+  position: relative;
+} */
+ /* .tanchu_view .bq {
+  background: url(https://mcs.lingdie.com/static/wechat/images/jxerr.png)  no-repeat;
+  background-size: 100%;
+  height: 100rpx;
+}
+ */
+
+
+.zhezao{
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0px;
+  background:rgba(0,0,0,0.4);
+  overflow: hidden;
+  }
+.t_w{
+  position:relative;
+  }
+.tanchu_view{
+  width: 90%;
+  margin:25% auto;
+  overflow: hidden;
+   background: url(https://mcs.lingdie.com/static/wechat/images/jxtc.png) no-repeat;
+  background-size: 100% 100%;
+  height: 500rpx;
+  padding: 4rpx;
+  }
+  /* 抱歉，加速失败 */
+.txtsure{
+ width: 70%;
+ display: flex;
+ background: url(https://mcs.lingdie.com/static/wechat/images/jxerr.png) no-repeat;
+ background-size: 75% ;
+ height: 80rpx;
+ margin: 250rpx 0 0 180rpx;
+}
+.txt{
+  font-size: 32rpx;
+  color: #4a4a4a;
+  margin-left: 180rpx;
+}
+
+/*取消图标*/
+.t_image{
+  width:204rpx;
+  height:200rpx;
+  position: absolute;
+  bottom: -45%;
+  left:45%;
+  }
+/*取消图标*/
+.t_image1{
+  display:block;
+  width:65rpx;
+  height:65rpx;
+  }
+
+/*下面图标*/
+/* .t_image {
+  width: 205rpx;
+  height: 200rpx;
+  position: absolute;
+  bottom: -45%;
+  left: 45%;
+} */
+
+/*图标*/
+
+/* .t_image1 {
+  display: block;
+  width: 60rpx;
+  height: 60rpx;
+} */

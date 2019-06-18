@@ -1,0 +1,138 @@
+/* pages/exchange/exchange.wxss */
+.content {
+  width: 750rpx;
+  height: 1300rpx;
+  background-color: #eaeaea;
+}
+
+.content .head {
+  width: 750rpx;
+  height: 200rpx;
+  background: #fff;
+}
+
+.head .baoz {
+  width: 700rpx;
+  height: 65rpx;
+  margin: 0 auto;
+}
+
+.baoz image {
+  width: 35rpx;
+  height: 35rpx;
+  padding: 10rpx 0 0 10rpx;
+}
+
+.baoz .riq {
+  margin-left: 20rpx;
+  font-size: 35rpx;
+}
+
+.baoz .zhi {
+  color: red;
+  font-size: 30rpx;
+}
+
+.baoz_box {
+  width: 700rpx;
+  height: 350rpx;
+  background: #fff;
+  margin: 30rpx auto;
+  border-radius: 20rpx;
+  box-shadow: 10rpx 10rpx 20rpx #666;
+}
+
+.baoz_box .txboxsp1 {
+  width: 620rpx;
+  height: 70rpx;
+  margin: 0rpx auto;
+  font-weight: 540;
+  padding-top: 20rpx;
+  font-size: 33rpx;
+}
+
+.baoz_box .tx_value {
+  width: 620rpx;
+  margin: 0 auto;
+  height: 80rpx;
+  font-weight: 540;
+  font-size: 60rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.baoz_box .txboxsp4 {
+  width: 620rpx;
+  margin: 30rpx auto;
+  font-size: 32rpx;
+}
+
+.txboxsp4 .zhang, .alldui {
+  color: #fe8c94;
+}
+
+/* 兑换券样式动态数据 */
+
+.duih_card {
+  width: 700rpx;
+  height: 200rpx;
+  background: #fff;
+  margin: 20rpx auto;
+  border-radius: 10rpx;
+  display: flex;
+}
+
+.duih_card .valu {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.valu .val_jg {
+  color: #43dcd2;
+  text-align: center;
+  font-size: 40rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-weight: normal;
+}
+.val_jg text {
+  font-size: 40rpx;
+}
+
+.valu  .quan {
+  text-align: center;
+  color: #43dcd2;
+  font-size: 33rpx;
+}
+/* 好友加速 */
+.haoyou{
+width: 370rpx;
+height: 200rpx;
+font-size: 27rpx;
+text-align: center;
+}
+.haoyou .jiaos{
+  font-weight: bold;
+  font-size: 30rpx;
+  margin: 35rpx 0;
+}
+.rad{
+  width: 130rpx;
+  height: 200rpx;
+  line-height: 200rpx;
+  text-align: center;
+}
+/* 兑现按钮 */
+.duix {
+  width: 700rpx;
+  background: #43dcd2;
+  color: #fff;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  font-weight: bold;
+  border-radius: 20rpx;
+  position: absolute;
+  left: 30rpx;
+  bottom: 10rpx;
+}

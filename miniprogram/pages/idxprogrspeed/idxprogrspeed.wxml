@@ -1,0 +1,107 @@
+<!--pages/idxprogrspeed/idxprogrspeed.wxml-->
+<view class='container'>
+   <view class='accelerate'>
+      <view class='data' wx:for="{{datebox}}" wx:for-item="items" wx:for-index="idx" wx:key="idx*">
+        <view class='img'>
+          <image src='{{items.headimgurl}}'></image>
+        </view>
+        <!-- 用户信息 -->
+        <view class='user'>
+          <view class='name'>
+            <image src='../../images/yh.png'></image>
+            <text>{{items.nickname}}</text>
+          </view>
+          <view class='name'>
+            <image src='../../images/zshi.png'></image>
+            <text wx:if='{{items.type==1}}'>方式:好友加速</text>
+            <text wx:else>方式:经验加速</text>
+          </view>
+          <view class='name'>
+            <image src='../../images/bt.png'></image>
+            <text>普通报账</text>
+          </view>
+        </view>
+        <view class='time'>
+          <view class='shij'>{{items.addtime}}</view>
+          <view class='quan'>
+            <view class='quan'>
+              <image src='../../images/quan.png'></image>
+              <view class='yhq'> 获得：<text class='jg'>{{items.money}}</text></view>
+            </view>
+          </view>
+          <view class='ac_dp'>
+          <image src='../../images/jiasu1.png'></image>
+          <view class='dp_name'>{{items.name}}</view>
+          </view>
+        </view>
+      </view>
+      <!-- 第二条 -->
+      <view class='data'>
+        <view class='img'>
+          <image src='../../images/suc.jpg'></image>
+        </view>
+        <!-- 用户信息 -->
+        <view class='user'>
+          <view class='name'>
+            <image src='../../images/yh.png'></image>
+            <text>哈*</text>
+          </view>
+          <view class='name'>
+            <image src='../../images/zshi.png'></image>
+            <text>方式:经验加速</text>
+          </view>
+          <view class='name'>
+            <image src='../../images/bt.png'></image>
+            <text>普通报账</text>
+          </view>
+        </view>
+        <view class='time'>
+          <view class='shij'>2019-06-03 11:50:54</view>
+          <view class='quan'>
+            <view class='quan'>
+              <image src='../../images/quan.png'></image>
+              <view class='yhq'> 获得：<text class='jg'> 0:00元</text></view>
+            </view>
+          </view>
+          <view class='ac_dp'>
+          <image src='../../images/jiasu1.png'></image>
+          <view class='dp_name'>吾悦店</view>
+          </view>
+        </view>
+      </view>
+      <!-- 第三条 -->
+      <view class='data'>
+        <view class='img'>
+          <image src='../../images/suc.jpg'></image>
+        </view>
+        <!-- 用户信息 -->
+        <view class='user'>
+          <view class='name'>
+            <image src='../../images/yh.png'></image>
+            <text>哈*</text>
+          </view>
+          <view class='name'>
+            <image src='../../images/zshi.png'></image>
+            <text>方式:经验加速</text>
+          </view>
+          <view class='name'>
+            <image src='../../images/bt.png'></image>
+            <text>普通报账</text>
+          </view>
+        </view>
+        <view class='time'>
+          <view class='shij'>2019-06-03 11:50:54</view>
+          <view class='quan'>
+            <view class='quan'>
+              <image src='../../images/quan.png'></image>
+              <view class='yhq'> 获得：<text class='jg'> 50:00元</text></view>
+            </view>
+          </view>
+          <view class='ac_dp'>
+          <image src='../../images/jiasu1.png'></image>
+          <view class='dp_name'>吾悦店</view>
+          </view>
+        </view>
+      </view>
+    </view>
+</view>

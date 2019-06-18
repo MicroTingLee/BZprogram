@@ -1,15 +1,23 @@
 {
-  "pages": [
+  "pages": [  
     "pages/index/index",
     "pages/car/car",
     "pages/my/my",
-    "pages/userConsole/userConsole",
-    "pages/storageConsole/storageConsole",
-    "pages/databaseGuide/databaseGuide",
-    "pages/addFunction/addFunction",
-    "pages/deployFunctions/deployFunctions",
-    "pages/chooseLib/chooseLib",
-    "pages/openapi/openapi"
+    "pages/idxprogresssuccess/idxprogresssuccess",
+    "pages/idxprogrspeed/idxprogrspeed",
+    "pages/exchange/exchange",
+    "pages/experience/experience",
+    "pages/poster/poster",
+    "pages/mynopay/mynopay",
+    "pages/baozhang/baozhang",
+    "pages/shangcheng/shangcheng",
+    "pages/myorder/myorder",
+    "pages/paymentprogress/paymentprogress",
+    "pages/mybzspeed/mybzspeed",
+    "pages/mybzsuccess/mybzsuccess",
+    "pages/myfriends/myfriends",
+    "pages/mybank/mybank",
+    "pages/mybankadd/mybankadd"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

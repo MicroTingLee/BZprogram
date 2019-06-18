@@ -1,0 +1,24 @@
+<!--pages/mybank/mybank.wxml-->
+<view class='bank'>
+  <view class='bankcard'>
+    <image src='https://yx.lingdie.com/images/image_app/style1/kakaka1.png'></image>
+    <view class='chux'>
+      <view class='title'>
+        <view class='name'>
+          <view class="mingc">大都督</view>
+          <view class="kaming">呃呃呃</view>
+        </view>
+        <view class='rad'>
+          <radio>默认银行卡</radio>
+        </view>
+      </view>
+      <view class='kh'>
+        <text>1111\t****\t****\t1111</text>
+        <button type='default' size='mini' class='zhux'>注销银行卡</button>
+      </view>
+    </view>
+  </view>
+  <navigator class='add' url='../mybankadd/mybankadd'>
+  <text class='tj'> +</text>
+  添加银行卡</navigator>
+</view>

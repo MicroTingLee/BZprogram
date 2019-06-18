@@ -1,0 +1,24 @@
+/* pages/mynopay/mynopay.wxss */
+@import "../baozhang/baozhang.wxss" ;
+@import "../shangcheng/shangcheng";
+.pay {
+  width: 100%;
+  height: 1200rpx;
+   background: #eaeaea;
+}
+.swiper-tab{
+  padding-top: 10rpx;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+}
+.swiper-tab-item{
+    width: 20%; 
+    color:#434343;
+      text-align: center;
+}
+.active{
+    color:rgb(76, 224, 197);
+    border-bottom: 4rpx solid rgb(76, 224, 197);
+}

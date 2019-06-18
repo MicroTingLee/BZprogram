@@ -1,0 +1,35 @@
+<!--pages/idxprogresssuccess/idxprogresssuccess.wxml-->
+<view class='container'>
+    <!--报账成功-->
+    <view class='success'>
+      <view class='data' wx:for='{{datebox}}' wx:for-item="items" wx:for-index="idx" wx:key="idx*">
+        <view class='img'>
+          <image src='{{items.headimgurl}}'></image>
+        </view>
+        <!-- 用户信息 -->
+        <view class='user'>
+          <view class='name'>
+            <image src='../../images/yh.png'></image>
+            <text>{{items.nickname}}</text>
+          </view>
+          <view class='name'>
+            <image src='../../images/bt.png'></image>
+            <text>普通报账</text>
+          </view>
+          <view class='name'>
+            <image src='../../images/dp.png' class='dp'></image>
+            <text>{{items.name}}</text>
+          </view>
+        </view>
+        <view class='time'>
+          <view class='shij'>{{items.addtime}}</view>
+          <view class='quan'>
+            <view class='quan'>
+              <image src='../../images/quan.png'></image>
+              <view class='yhq'>{{items.facevalue}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+</view>

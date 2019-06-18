@@ -51,11 +51,10 @@
         <view class='header'>
            <image src=''></image>
         </view>
-        <view class='content'>
+        <view class='contentbox'>
             <view>申请获取以下权限</view>
             <text>获得你的公开信息(昵称，头像等)</text>
         </view>
- 
         <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
             授权登录
         </button>
@@ -64,6 +63,175 @@
 </view>
  
 <view wx:else>
-    <view>我的首页内容1111</view>
+  <view class='content'>
+  <view class='top'>
+    <image src='../../images/bj2.png' class='top_img'></image>
+    <view class='head'>
+      <!-- <view class='search'> -->
+      <swiper class='search' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" vertical="{{vertical}} " circular="{{circular}}">
+        <block wx:for="{{paom}}" wx:for-index="idx" wx:for-item="item" wx:key="idx">
+          <swiper-item>
+            <image src="{{item.headimgurl}}" class="slide-image" />
+            <text class='name'>{{item.nickname}}</text>
+            <text class='span'>{{item.addtime}}</text>
+            <text class='time'>报账{{item.money}}元</text> 
+          </swiper-item>
+        </block>
+      </swiper>
+      <!-- </view> -->
+      <view class='ewm'>
+        <image src='../../images/sysaoma.png'></image>
+        <view class='text'>到店扫码</view>
+      </view>
+    </view>
+  </view>
+  <!-- 报账成功卡片 -->
+  <view class='mokuai'>
+    <view class='kuai'>
+      <!-- 第一块 -->
+      <navigator class='kuai1' url='../idxprogresssuccess/idxprogresssuccess'>
+        <image src='../../images/gr7.png'></image>
+        <view class='kuai_pan'>报账成功</view>
+        <view class='kuai_A'>
+          <text>{{totalsuccess}}</text> 张</view>
+      </navigator>
+      <!-- 第二块 -->
+      <navigator class='kuai1'>
+        <view class='kuai_j'>
+          <text>￥</text>{{totalmoney}}</view>
+        <view class='leiji'>累计报账金额</view>
+        <view class="canyu">
+          <view class="kuai_Can">当前超过
+            <text class='pr'>99</text>%的用户参与报账
+          </view>
+        </view>
+      </navigator>
+      <!-- 第三块 -->
+      <navigator class='kuai1' url='../idxprogrspeed/idxprogrspeed'>
+        <image src='../../images/gr10.png'></image>
+        <view class='kuai_pan'>加速报账</view>
+        <view class='kuai_A'>
+          <text>{{totalspeedup}}</text> 次</view>
+      </navigator>
+    </view>
+  </view>
+  <!-- 门店精选 -->
+  <view class='aside'>
+    <view class='hend'>
+      <icon class="iconfont">—</icon>
+      <text>门店</text>
+      <icon class="icon">.</icon>
+      <text class="shanhu">精选</text>
+      <icon class="iconfont">—</icon>
+    </view>
+    <view class='content'>
+      <view class='lists'>
+        <navigator class='sp1' wx:for="{{store1}}" wx:for-item="stro1item" wx:for-index="store1index" wx:key="stroe1index+'*'">
+          <image src="../../images/jiasu8.png"></image>
+          <view class='list_left'>
+            <view class='title'>{{stro1item.name}}</view>
+            <view class='renzhen'>
+              <text class='jip'>金牌认证</text>
+              <text>每满500报500</text>
+            </view>
+            <view class="dizi">
+              <span class="add">{{stro1item.addr}}</span>
+            </view>
+            <view class="phone">
+              <text>{{stro1item.tel}}</text>
+            </view>
+          </view>
+          <!-- 门店精选右边的动态数据 -->
+          <view class='list_right'>
+            <view class='jg'>￥120</view>
+            <view class='ybaoz'>已报账</view>
+          </view>
+        </navigator>
+      </view>
+      <navigator class='mdmore'>
+        <text space="nbsp" decode="{{true}}"> 查&nbsp;&nbsp;看&nbsp;&nbsp;更&nbsp;&nbsp;多&nbsp;>&nbsp;
+        </text>
+      </navigator>
+    </view>
+  </view>
+  <!-- 内容列表部分 -->
+  <view class='hd'>
+    <view class='hd_img'>
+      <image src='../../images/ksshop34.png'></image>
+      <view class='text'>
+        <view class='yaoq'> 邀请好友 赚经验值</view>
+        <view class='haoy'>每邀一位好友</view>
+        <view class='jianl'>可获得其在门店首次消费10%的奖励</view>
+        <navigator class='go'>
+          <image src='../../images/kshop35.png' class='go_img'></image>
+        </navigator>
+      </view>
+    </view>
+    <!-- 第一条 -->
+    <view class='huodong'>
+      <navigator>
+        <view class='hdkuang'>
+          <image src='../../images/jiasu8.png' class='tx'></image>
+          <view class='hd_content'>
+            <view class='qshen'>全身SPA</view>
+            <view class="msp2">运用不同按摩手法并结合芳香精华，由内而外的恢复健康</view>
+            <view class='hd_icon'>
+              <image src='../../images/zan.png'></image>
+              <text class='ic_txt'>0</text>
+              <image src='../../images/eye.png'></image>
+              <text class='ic_txt'>0</text>
+              <image src='../../images/renshu.png'></image>
+              <text class='ic_txt'>0</text>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+    <!-- 第二条 -->
+    <view class='huodong'>
+      <navigator>
+        <view class='hdkuang'>
+          <image src='../../images/jiasu8.png' class='tx'></image>
+          <view class='hd_content'>
+            <view class='qshen'>韩式半永久睫毛线</view>
+            <view class="msp2">私人定制, 打造清新真素颜美,色泽自然, 安全性高</view>
+            <view class='hd_icon'>
+              <image src='../../images/zan.png'></image>
+              <text class='ic_txt'>0</text>
+              <image src='../../images/eye.png'></image>
+              <text class='ic_txt'>0</text>
+              <image src='../../images/renshu.png'></image>
+              <text class='ic_txt'>0</text>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+    <!-- 第三条 -->
+    <view class='huodong'>
+      <navigator>
+        <view class='hdkuang'>
+          <image src='../../images/jiasu8.png' class='tx'></image>
+          <view class='hd_content'>
+            <view class='qshen'>嫩肤专场（水光针）</view>
+            <view class="msp2">打开皮肤通道，将精华均匀,注射至需改善部位</view>
+            <view class='hd_icon'>
+              <image src='../../images/zan.png'></image>
+              <text class='ic_txt'>0</text>
+              <image src='../../images/eye.png'></image>
+              <text class='ic_txt'>0</text>
+              <image src='../../images/renshu.png'></image>
+              <text class='ic_txt'>0</text>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+    <navigator class='mdmore'>
+      <text space="nbsp" decode="{{true}}"> 查&nbsp;&nbsp;看&nbsp;&nbsp;更&nbsp;&nbsp;多&nbsp;>&nbsp;
+        </text>
+    </navigator>
+  </view>
+</view>
 </view>
 </view>

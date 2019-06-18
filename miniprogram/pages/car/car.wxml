@@ -1,6 +1,77 @@
 <!--pages/car/car.wxml-->
 <view class='container'>
     <view class='car'>
-        
+        <image class='headerpic' src='../../images/66.png'></image>
+        <view class='buycontent'> 
+            <view class='buymoney'>
+             <!-- 购买输入金额 -->
+               <view class='buytop'>
+                     <view class='shuru'>
+                        <image src='../../images/yuan2.png'></image>
+                        <text>购买金额</text>
+                    </view>
+                    <view class='srinput'>
+                        <text>￥</text>
+                        <input placeholder-class='inputph' type='number' placeholder='请输入购买金额' bindinput="checkinput"></input>
+                    </view>
+               </view>
+               <!-- 展示部分 -->
+               <view class='showcontent'>
+                    <view class='showbox'>
+                        <image src='../../images/canyu.png'></image>
+                        <view>购卡张数：<text>{{sheets}}</text>张</view>
+                    </view>
+                    <view class='showbox'>
+                        <view class='showboxl'>
+                            <image src='../../images/gouka.png'></image>
+                            <view>购卡金额：<text>{{gkje}}</text>元</view>
+                        </view>
+                        <view class='showboxr'>
+                            <image src='../../images/yingshou.png'></image>
+                            <view>购卡余额：<text>{{yue}}</text>元</view>
+                        </view>
+                    </view>
+                    <view class='showbox'>
+                        <view class='showboxl'>
+                            <image src='../../images/icu5.png'></image>
+                            <view>报账面额：<text>{{facevalue}}</text>元/张</view>
+                        </view>
+                        <view  class='showboxr'>
+                            <image src='../../images/icu6.png'></image>
+                            <view>卡服务费：<text>{{caffe}}</text>元/张</view>
+                        </view>
+                    </view>
+                    <view class='totalmoney'>
+                    合计应收：<text>{{tatalmoney}}</text>元
+                    </view>
+                    <button type='primary' bindtap='pay'>购买</button>
+                    <!-- 注明 -->
+                    <view class='zhuming'>
+                        <text class='zmtitle'>注明</text>
+                        <view class='zmcontent'>
+                            <text>①卡费不足金额是指当前消费金额不足单张卡费的剩余金额.</text>
+                            <text>②下次消费金额可以累加上次卡费不足金额.</text>
+                        </view>   
+                    </view>
+                </view>
+                </view>
+               <view>   
+            </view>
+        </view>
+        <!-- 点击购买弹出筐 -->
+        <view class='buyceng' wx:if="{{ceng}}" catchtouchmove='ture'>
+            <view class='buybox'>
+                  <view class='bb'>本次购买<text>1</text>张,总计1000元</view>
+                  <button class='smzhifu' bindtap='saoma'>扫码支付</button>
+                  <button class='cancel'>取消</button>
+            </view>
+        </view>
+        <!-- 点击扫码支付弹出框 -->
+        <view class='zhifuceng' wx:if="{{zfceng}}"  catchtouchmove='ture'>
+            <view class='zfcengbox'>
+                <image class='zfcancel' bindtap='zfcancel' src='../../images/iconclose.png'></image>
+                <canvas canvas-id="qrcode"></canvas>
+            </view>
+        </view>
     </view>
 </view>

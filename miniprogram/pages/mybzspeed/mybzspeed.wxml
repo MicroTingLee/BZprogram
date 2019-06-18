@@ -1,0 +1,63 @@
+<!--pages/mybzspeed/mybzspeed.wxml-->
+<!--我的报账加速-->
+<view class='success'>
+  <view class='data'>
+    <view class='img'>
+      <image src='../../images/suc.jpg'></image>
+    </view>
+    <!-- 用户信息 -->
+    <view class='user'>
+     <view class='name'>
+        <image src='../../images/jiasu2.png'></image>
+        <text>来源：哈喽</text>
+      </view>
+      <view class='name'>
+        <image src='../../images/js03.png'></image>
+        <text>时间：2019-06-03 11:50:54</text>
+      </view>
+      <view class='name'>
+        <image src='../../images/js04.png' class='dp'></image>
+        <text>门店：吾悦店</text>
+      </view>
+    </view>
+    <view class='time'>
+      <view class='shij'></view>
+      <view class='quan'>
+        <view class='quan'>
+          <image src='../../images/quan.png'></image>
+          <view class='yhq'>获得： <text>1000元</text> </view>
+        </view>
+      </view>
+    </view>
+  </view>
+<!-- 第二条 -->
+ <view class='data'>
+    <view class='img'>
+      <image src='../../images/suc.jpg'></image>
+    </view>
+    <!-- 用户信息 -->
+    <view class='user'>
+     <view class='name'>
+        <image src='../../images/jiasu2.png'></image>
+        <text>来源：哈喽</text>
+      </view>
+      <view class='name'>
+        <image src='../../images/js03.png'></image>
+        <text>时间：2019-06-03 11:50:54</text>
+      </view>
+      <view class='name'>
+        <image src='../../images/js04.png' class='dp'></image>
+        <text>门店：吾悦店</text>
+      </view>
+    </view>
+    <view class='time'>
+      <view class='shij'></view>
+      <view class='quan'>
+        <view class='quan'>
+          <image src='../../images/quan.png'></image>
+          <view class='yhq'>获得： <text>0.00元</text> </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  </view>

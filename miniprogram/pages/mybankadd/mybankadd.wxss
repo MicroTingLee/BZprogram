@@ -1,0 +1,146 @@
+/* pages/mybankadd/mybankadd.wxss */
+.bankadd {
+  width: 750rpx;
+  height: 1200rpx;
+  background: #eaeaea;
+}
+
+.bankadd .bangka {
+  width: 750rpx;
+  color: #c1c1c4;
+  height: 96rpx;
+  line-height: 96rpx;
+}
+
+/* 持卡人 */
+
+.bankadd .chikaren {
+  width: 750rpx;
+  height: 150rpx;
+  background: #fff;
+  line-height: 150rpx;
+  color: #333;
+  display: flex;
+  padding: 0 0 0 20rpx;
+  border: 1rpx solid #d9d9d9;
+  border-left: none;
+  border-right: none;
+  font-size: 30rpx;
+  box-sizing: border-box;
+}
+
+.chikaren text {
+  width: 120rpx;
+}
+
+.chikaren .name {
+  width: 490rpx;
+  margin-top: 50rpx;
+}
+
+.chikaren .gz {
+  width: 55rpx;
+  height: 55rpx;
+  padding: 30rpx 0 0 20rpx;
+}
+
+/* 持卡号 */
+
+.bankadd .chikaren1 {
+  width: 750rpx;
+  height: 150rpx;
+  background: #fff;
+  line-height: 150rpx;
+  color: #333;
+  display: flex;
+  padding: 0 0 0 20rpx;
+  border-bottom: 1rpx solid #d9d9d9;
+  font-size: 30rpx;
+  box-sizing: border-box;
+}
+
+.chikaren1 text {
+  width: 120rpx;
+}
+
+.chikaren1 .name {
+  width: 480rpx;
+  margin-top: 50rpx;
+}
+
+.chikaren1 .gz {
+  width: 80rpx;
+  height: 80rpx;
+  padding: 30rpx 0 0 20rpx;
+}
+
+/* 银行名 */
+
+.bankadd .chikaren2 {
+  width: 750rpx;
+  height: 150rpx;
+  background: #fff;
+  line-height: 150rpx;
+  color: #333;
+  display: flex;
+  padding: 0 0 0 20rpx;
+  border-bottom: 1rpx solid #d9d9d9;
+  font-size: 30rpx;
+  box-sizing: border-box;
+}
+
+.chikaren2 text {
+  width: 120rpx;
+}
+
+.chikaren2 .name {
+  width: 480rpx;
+  margin-top: 50rpx;
+}
+
+.chikaren2 .gz {
+  width: 80rpx;
+  height: 80rpx;
+  padding: 30rpx 0 0 20rpx;
+}
+
+/* 设置默认银行 */
+
+.bankadd .chikaren3 {
+  width: 750rpx;
+  height: 150rpx;
+  background: #fff;
+  line-height: 150rpx;
+  color: #333;
+  display: flex;
+  padding: 0 0 0 20rpx;
+  border-bottom: 1rpx solid #d9d9d9;
+  font-size: 30rpx;
+  box-sizing: border-box;
+}
+
+.chikaren3 text {
+  width: 250rpx;
+}
+
+.chikaren3 .name {
+  width: 388rpx;
+  margin-top: 50rpx;
+}
+
+.chikaren3 .gz {
+  width: 60rpx;
+  height: 60rpx;
+  padding: 30rpx 0 0 20rpx;
+}
+.baoc{
+  width: 700rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  background: #42DBD3;
+    border: 1rpx solid #93c893;
+    margin: 40rpx auto;
+    color: #fff;
+    border-radius: 20rpx;
+}

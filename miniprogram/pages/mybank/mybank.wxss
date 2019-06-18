@@ -1,0 +1,66 @@
+/* pages/mybank/mybank.wxss */
+.bank {
+  width: 750rpx;
+}
+
+.bank .bankcard {
+  width: 680rpx;
+  margin: 40rpx auto;
+  height: 250rpx;
+  background: url('https://yx.lingdie.com/images/image_app/style1/youzheng.png') no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+}
+
+.bankcard image {
+  width: 85rpx;
+  height: 70rpx;
+  padding: 30rpx 10rpx 0 30rpx;
+}
+
+.bankcard .chux {
+  width: 680rpx;
+  height: 250rpx;
+  color: #fff;
+}
+
+.chux .title {
+  width: 100%;
+  height: 140rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.name .mingc, .kaming {
+  padding-top: 20rpx;
+}
+.name .kaming {
+  font-size: 30rpx;
+}
+.title .rad{
+  font-size: 28rpx;
+   padding: 20rpx 20rpx 0 0;
+}
+
+.chux .kh {
+  font-size: 33rpx;
+}
+.kh .zhux{
+  margin-left: 60rpx;
+}
+.add{
+  width: 680rpx;
+  height: 90rpx;
+  background: #3FDBD7;
+  text-align: center;
+  line-height: 90rpx;
+  border-radius: 20rpx;
+  color: #fff;
+  position: absolute;
+  left: 35rpx;
+  bottom: 20rpx;
+}
+.add .tj{
+  font-weight: bold;
+  font-size: 50rpx;
+}

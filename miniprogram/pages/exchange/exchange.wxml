@@ -1,0 +1,57 @@
+<!--pages/exchange/exchange.wxml-->
+<!-- 待兑额 -->
+<view class='content'>
+  <view class='head'>
+    <view class='baoz'>
+      <image src='https://yx.lingdie.com/images/image_app/style1/dui1.png'></image>
+      <text class='riq'>报\t账\t日：</text>
+      <text class='zhi'>2019年06月13日</text>
+    </view>
+    <view class='baoz'>
+      <image src='https://yx.lingdie.com/images/image_app/style1/dui2.png'></image>
+      <text class='riq'>报\t账\t地\t址：</text>
+      <text class='zhi'>南京微汀科技</text>
+    </view>
+  </view>
+  <view class='baoz_box'>
+    <view class="txboxsp1">报账兑现额</view>
+    <view class='tx_value'>￥0</view>
+    <view class="txboxsp4">当前报账券
+      <text class="zhang">0</text>张，
+      <text class="alldui">全部兑现</text>
+    </view>
+  </view>
+  <!-- /* 第二条兑换券样式动态 */ -->
+  <view class='duih_card'>
+    <view class='valu'>
+      <view class='val_jg'>
+        <text>￥</text>5000:00</view>
+      <view class='quan'>报账券</view>
+    </view>
+    <!-- 好友加速 -->
+    <view class='haoyou'>
+      <view class='jiaos'>好友加速</view>
+      <view>可用于商城消费与合伙人计划</view>
+    </view>
+    <view class='rad'>
+      <radio></radio>
+    </view>
+  </view>
+<!-- /* 兑换券样式动态 */ -->
+  <view class='duih_card'>
+    <view class='valu'>
+      <view class='val_jg'>
+        <text>￥</text>50:00</view>
+      <view class='quan'>报账券</view>
+    </view>
+    <!-- 好友加速 -->
+    <view class='haoyou'>
+      <view class='jiaos'>好友加速</view>
+      <view>可用于商城消费与合伙人计划</view>
+    </view>
+    <view class='rad'>
+      <radio></radio>
+    </view>
+  </view>
+  <view class='duix'> 兑现</view>
+</view>

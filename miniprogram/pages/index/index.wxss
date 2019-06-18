@@ -1,140 +1,6 @@
 /**index.wxss**/
 
-/* page {
-  background: #f6f6f6;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
 
-.userinfo, .uploader, .tunnel {
-  margin-top: 40rpx;
-  height: 140rpx;
-  width: 100%;
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-left: none;
-  border-right: none;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  transition: all 300ms ease;
-}
-
-.userinfo-avatar {
-  width: 100rpx;
-  height: 100rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-  background-size: cover;
-  background-color: white;
-}
-
-.userinfo-avatar:after {
-  border: none;
-}
-
-.userinfo-nickname {
-  font-size: 32rpx;
-  color: #007aff;
-  background-color: white;
-  background-size: cover;
-}
-
-.userinfo-nickname::after {
-  border: none;
-}
-
-.uploader, .tunnel {
-  height: auto;
-  padding: 0 0 0 40rpx;
-  flex-direction: column;
-  align-items: flex-start;
-  box-sizing: border-box;
-}
-
-.uploader-text, .tunnel-text {
-  width: 100%;
-  line-height: 52px;
-  font-size: 34rpx;
-  color: #007aff;
-}
-
-.uploader-container {
-  width: 100%;
-  height: 400rpx;
-  padding: 20rpx 20rpx 20rpx 0;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  box-sizing: border-box;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.uploader-image {
-  width: 100%;
-  height: 360rpx;
-}
-
-.tunnel {
-  padding: 0 0 0 40rpx;
-}
-
-.tunnel-text {
-  position: relative;
-  color: #222;
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: space-between;
-  box-sizing: border-box;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.tunnel-text:first-child {
-  border-top: none;
-}
-
-.tunnel-switch {
-  position: absolute;
-  right: 20rpx;
-  top: -2rpx;
-}
-
-.disable {
-  color: #888;
-}
-
-.service {
-  position: fixed;
-  right: 40rpx;
-  bottom: 40rpx;
-  width: 140rpx;
-  height: 140rpx;
-  border-radius: 50%;
-  background: linear-gradient(#007aff, #0063ce);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  transition: all 300ms ease;
-}
-
-.service-button {
-  position: absolute;
-  top: 40rpx;
-}
-
-.service:active {
-  box-shadow: none;
-}
-
-.request-text {
-  padding: 20rpx 0;
-  font-size: 24rpx;
-  line-height: 36rpx;
-  word-break: break-all;
-} */
 .header {
     margin: 90rpx 0 90rpx 50rpx;
     border-bottom: 1px solid #ccc;
@@ -149,12 +15,12 @@
     height: 200rpx;
 }
  
-.content {
+.contentbox {
     margin-left: 50rpx;
     margin-bottom: 90rpx;
 }
  
-.content text {
+.contentbox text {
     display: block;
     color: #9d9d9d;
     margin-top: 40rpx;
@@ -164,4 +30,402 @@
     border-radius: 80rpx;
     margin: 70rpx 50rpx;
     font-size: 35rpx;
+}
+
+/* 首页头部 */
+
+.content {
+  width: 750rpx;
+}
+
+.top {
+  width: 750rpx;
+  height: 330rpx;
+}
+
+.top .top_img {
+  width: 750rpx;
+  height: 330rpx;
+}
+
+.head {
+  width: 750rpx;
+  height: 110rpx;
+  display: flex;
+  padding-top: 15rpx;
+  box-sizing: border-box;
+  position: absolute;
+  top: 5rpx;
+}
+
+.head .search {
+  width: 80%;
+  height: 60rpx;
+  background: rgba(30, 26, 26, 0.4);
+  border-radius: 30rpx;
+  margin-left: 20rpx;
+}
+
+.search .slide-image{
+  width: 55rpx;
+  height: 50rpx;
+  margin: 8rpx 0 10rpx 25rpx;
+  border-radius: 30rpx;
+  float: left;
+}
+.search .name{
+  color: #fff;
+  width: 100rpx;
+  font-size: 28rpx;
+  padding-left: 20rpx;
+}
+.search .time{
+  color: #f00;
+  font-size: 25rpx;
+  padding-left: 10rpx;
+}
+.search .span{
+  font-size: 23rpx;
+  margin-left: 10rpx;
+  color: #fff;
+}
+.head .ewm {
+  flex-grow: 1;
+}
+
+.ewm image {
+  width: 60rpx;
+  height: 60rpx;
+  display: block;
+  margin: 0 auto;
+}
+
+.ewm .text {
+  font-size: 22rpx;
+  color: #fff;
+  text-align: center;
+  /* position: absolute; */
+  /* right: 65rpx; */
+}
+
+.mokuai {
+  width: 750rpx;
+  height: 200rpx;
+  background: #fff;
+}
+
+.mokuai .kuai {
+  width: 650rpx;
+  height: 250rpx;
+  background: #fff;
+  margin: 0 auto;
+  position: relative;
+  top: -90rpx;
+  box-shadow: darkgrey 0 0 15px 0;
+  border-radius: 20rpx;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* 模块样式 */
+
+.kuai .kuai1 {
+  width: 200rpx;
+  height: 220rpx;
+  margin: 10rpx 0 10rpx 0rpx;
+  text-align: center;
+}
+
+.kuai1 image {
+  width: 70rpx;
+  height: 70rpx;
+  margin-left: 20rpx;
+}
+
+.kuai1 .kuai_pan {
+  font-size: 32rpx;
+  color: #8b8b8b;
+  margin-bottom: 20rpx;
+}
+
+.kuai1 .kuai_A {
+  color: #080808;
+  font-size: 36rpx;
+}
+
+/* 第二个模块样式 */
+
+.kuai1 .kuai_j {
+  color: red;
+  font-size: 42rpx;
+  font-weight: 600;
+}
+
+.kuai1 .leiji {
+  color: #f00;
+  height: 55rpx;
+  font-size: 30rpx;
+  padding: 0 20rpx 0 20rpx;
+  position: absolute;
+  line-height: 50rpx;
+  border: 1rpx dashed red;
+  border-radius: 15rpx;
+  top: 90rpx;
+}
+
+.kuai1 .kuai_Can {
+  position: absolute;
+  bottom: 50rpx;
+  font-size: 25rpx;
+  left: 170rpx;
+  color: #f00;
+}
+
+/* 门店精选 */
+
+.aside {
+  width: 100%;
+  height: 330rpx;
+  /* background: pink; */
+}
+
+.aside .hend {
+  width: 100%;
+  height: 40rpx;
+  text-align: center;
+  line-height: 50rpx;
+  font-weight: bold;
+  font-size: 42rpx;
+}
+
+.hend text {
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+
+.hend .iconfont {
+  color: #ccc;
+  font-size: 40rpx;
+  font-weight: normal;
+  margin-top: 10rpx;
+}
+
+.hend .shanhu {
+  font-size: 42rpx;
+  margin-right: 20rpx;
+  color: #35dbc0;
+}
+
+.hend .icon {
+  color: #333;
+  font-size: 60rpx;
+  margin-bottom: 20rpx;
+}
+
+.aside .content {
+  width: 100%;
+  height: 230rpx;
+  margin-top: 20rpx;
+}
+
+.content .lists {
+  width: 740rpx;
+  height: 210rpx;
+  margin: 30rpx auto 0;
+  background: #fff;
+  border-bottom: 1rpx solid #e6e3e3;
+}
+
+.lists .sp1 {
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10rpx;
+  box-sizing: border-box;
+}
+
+.sp1 image {
+  width: 140rpx;
+  height: 170rpx;
+}
+
+.sp1 .list_left {
+  width: 370rpx;
+  height: 180rpx;
+}
+
+.list_left .title {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.list_left .renzhen {
+  font-size: 28rpx;
+  color: #ffb966;
+  margin-top: 10rpx;
+}
+
+.renzhen .jip {
+  width: 100rpx;
+  height: 30rpx;
+  border: 1rpx solid #ffb966;
+  margin-right: 10rpx;
+}
+
+.list_left .dizi {
+  font-size: 25rpx;
+  color: gray;
+  margin-top: 10rpx;
+}
+
+.list_left .phone {
+  font-size: 25rpx;
+  color: gray;
+  margin-top: 10rpx;
+}
+
+/* 门店精选右边 */
+
+.sp1 .list_right {
+  width: 200rpx;
+  height: 180rpx;
+  /* background: burlywood; */
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.list_right .jg {
+  color: #f00;
+}
+
+.list_right .ybaoz {
+  color: #777;
+  font-size: 30rpx;
+}
+
+/* 查看更多 */
+
+.content .mdmore {
+  width: 100%;
+  text-align: center;
+  color: #777;
+  margin-top: 3rpx;
+}
+
+.mdmore text {
+  display: block;
+  width: 320rpx;
+  height: 50rpx;
+  background: #e8e8e8;
+  font-size: 30rpx;
+  margin: 0rpx auto;
+  line-height: 50rpx;
+  border-radius: 10rpx;
+}
+
+/* 内容列表样式 */
+
+.hd {
+  width: 750rpx;
+  height: 800rpx;
+  position: relative;
+}
+
+.hd .hd_img {
+  width: 710rpx;
+  /* height: 200rpx; */
+  margin: 10rpx auto;
+}
+
+.hd .text {
+  width: 700rpx;
+  position: absolute;
+  top: 10rpx;
+  color: #fff;
+}
+.text .yaoq{
+  width: 350rpx;
+  margin:  10rpx auto;
+  font-weight: bold;
+}
+.text .jianl{
+  width: 500rpx;
+  margin: 15rpx auto;
+  font-size: 30rpx;
+}
+.text .haoy{
+  width: 350rpx;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 28rpx;
+}
+.text .go {
+  width: 100rpx;
+  /* height: 100rpx; */
+  position: absolute;
+  right: 0rpx;
+  top: 25rpx;
+}
+.go .go_img {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.hd image {
+  width: 710rpx;
+  height: 200rpx;
+}
+
+.hd .huodong {
+  width: 750rpx;
+  height: 215rpx;
+  margin-top: 10rpx;
+}
+
+.huodong .hdkuang {
+  width: 750rpx;
+  height: 215rpx;
+  display: flex;
+  justify-content: space-around;
+}
+
+.huodong .tx {
+  width: 150rpx;
+  height: 160rpx;
+  border-radius: 10rpx;
+}
+
+.huodong .hd_content {
+  width: 530rpx;
+  height: 160rpx;
+}
+
+.hd_content .qshen {
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.hd_content .msp2 {
+  font-size: 28rpx;
+  color: #777;
+}
+
+.hd_icon {
+  display: flex;
+}
+
+.hd_icon image {
+  display: block;
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+  margin-top: 5rpx;
+}
+
+.hd_icon .ic_txt {
+  font-size: 25rpx;
+  margin-right: 15rpx;
+  margin-top: 10rpx;
+  color: #777;
 }

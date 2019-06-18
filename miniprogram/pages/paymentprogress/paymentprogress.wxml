@@ -1,0 +1,79 @@
+<!--pages/paymentprogress/paymentprogress.wxml-->
+<!-- 报账进度 -->
+<view class='container'>
+  <view class='head'>
+    <!-- 活动规则 -->
+    <view class='guiz'>
+      <image src='../../images/gz.png' class='gz'></image>
+      <text class='hdong'>活动规则</text>
+    </view>
+    <!-- 进度条 -->
+    <view class='prog'>
+      <view class='pr_value'>0</view>
+      <view class='sjx'>▼</view>
+      <progress class='jdt' percent="20" active border-radius='10' stroke-width='10' activeColor='#FA6BAE' backgroundColor='#ccc' />
+    </view>
+    <view class='yu'>
+      <text>余\t￥：0</text>
+      <text>总\t￥：0</text>
+    </view>
+    <!-- 进度条下面的图 -->
+    <view class='tick'>
+      <text>—</text>
+      <image src='https://yx.lingdie.com/images/image_app/style1/ticket1.png'></image>
+      <text>—</text>
+      <image src='https://yx.lingdie.com/images/image_app/style1/ticket2.png'></image>
+      <text>—</text>
+    </view>
+    <!-- 我的报账数据 -->
+    <view class='baoz'>
+      <image src='../../images/yiyong.png'></image>
+      <text>0/</text>
+      <image src='../../images/zongji.png'></image>
+      <text>0</text>
+    </view>
+  </view>
+  <!-- 报账成功卡片 -->
+  <view class='mokuai'>
+    <view class='kuai'>
+      <!-- 第一块 -->
+      <navigator class='kuai1'>
+        <image src='../../images/gr7.png'></image>
+        <view class='kuai_pan'>报账成功</view>
+        <view class='kuai_A'>
+          <text>0</text> 张</view>
+      </navigator>
+      <!-- 第二块 -->
+      <navigator class='kuai1'>
+        <view class='kuai_j'>
+          <text>￥</text>0</view>
+        <view class='leiji'>累计报账金额</view>
+        <view class="canyu">
+          <view class="kuai_Can">当前超过
+            <text class='pr'>0</text>%的用户参与报账
+          </view>
+        </view>
+      </navigator>
+      <!-- 第三块 -->
+      <navigator class='kuai1'>
+        <image src='../../images/gr10.png'></image>
+        <view class='kuai_pan'>加速报账</view>
+        <view class='kuai_A'>
+          <text>0</text> 次</view>
+      </navigator>
+    </view>
+  </view>
+  <!-- 什么是经验值 -->
+  <view class="jinzhi">
+    <text>
+            什么是经验值？\n
+            经验值是本系统用来兑换现金的一种价值体现。\n
+            获取方式：可通过点下方立即加速，生成海报并邀请好友注册和购买报账卡获得。\n
+            兑换方式：在我的余额中点击加速报账进行兑换，兑换成功后可在余额中查看。
+    </text>
+  </view>
+  <view class='bottom'>
+    <navigator class='jiasu'>加速报账</navigator>
+    <navigator class='zhaunqu'>立即赚取经验值</navigator>
+  </view>
+</view>
