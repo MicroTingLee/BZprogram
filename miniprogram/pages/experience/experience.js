@@ -1,4 +1,5 @@
 // pages/experience/experience.js
+const app=getApp()
 Page({
 
   /**
@@ -34,7 +35,30 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var that = this
+    var token = app.globalData.token
+    var cardnum = wx.getStorageSync('cardnum')
+    console.log(cardnum, token)
+    wx.request({
+      url: 'https://mcs.lingdie.com/wechat/Bzoneselfxcx/jy',
+      data: {
+        token: token,
+        cardnum: cardnum
+      },
+      header: {
+        'content-type': 'application/json' //默认值
+      },
+      method: 'POST',
+      success: function (res) {
+        console.log(res, '经验')
+        that.setData({
+          databox: res.data
+        })
+      },
+      fail: function (res) {
+        console.log('获取经验值失败')
+      },
+    })
   },
 
   /**

@@ -1,4 +1,5 @@
 // pages/poster/poster.js
+const app=getApp()
 Page({
 
   /**
@@ -12,7 +13,32 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var appid = app.globalData.gappid
+    var secret = app.globalData.gsecret
+    var openid = app.globalData.openid
+    var token = app.globalData.token
+    wx.request({
+      url: 'https://mcs.lingdie.com/wechat/Bzoneselfxcx/fenxian',
+      method: 'POST',
+      data: {
+        appid: appid,
+        secret: secret,
+        openid: openid,
+        token: token
+      },
+      success: res => {
+        console.log(res, '海报')
+        var code = res.data.code
+        if (code == 1) {
+          this.setData({
+            hbimgurl: res.data.msg
+          })
+        } else {
+          console.log('获取失败')
+        }
 
+      }
+    })
   },
 
   /**
@@ -26,7 +52,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+  
   },
 
   /**

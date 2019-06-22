@@ -1,0 +1,10 @@
+<!--pages/idxcumul/idxcumul.wxml-->
+<!--   -->
+<view class='culmul'>
+  <view class='culmul_content'>
+    <view class='cul_img'>
+      <image src='../../images/jiasu8.png'></image>
+    </view>
+    <view class='cul_'></view>
+  </view>
+</view>

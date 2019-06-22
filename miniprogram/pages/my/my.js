@@ -12,7 +12,9 @@ Page({
     yue:''
 
   },
+  // wx.switchTab({
 
+  // }),
   /**
    * 生命周期函数--监听页面加载
    */
@@ -33,7 +35,7 @@ Page({
   onShow: function () {
     var that=this
     var token = app.globalData.token
-    var cardnum=app.globalData.cardnum
+    var cardnum=wx.getStorageSync('cardnum')
     wx:wx.request({
       url: 'https://mcs.lingdie.com/wechat/Bzoneselfxcx/personal_center',
       data: {

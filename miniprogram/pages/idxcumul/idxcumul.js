@@ -1,4 +1,4 @@
-// pages/shangcheng/shangcheng.js
+// pages/idxcumul/idxcumul.js
 Page({
 
   /**

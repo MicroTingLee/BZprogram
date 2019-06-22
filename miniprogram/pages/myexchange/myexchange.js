@@ -1,11 +1,12 @@
 // pages/exchange/exchange.js
+const app=getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    databox:[]
   },
 
   /**
@@ -26,7 +27,30 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var that = this
+    var token = app.globalData.token
+    var cardnum = wx.getStorageSync('cardnum')
+    console.log(cardnum, token)
+    wx.request({
+      url: 'https://mcs.lingdie.com/wechat/Bzlogicxcx/coupon',
+      data: {
+        token: token,
+        cardnum: cardnum
+      },
+      header: {
+        'content-type': 'application/json' //默认值
+      },
+      method: 'POST',
+      success: function (res) {
+        console.log(res, '卡券')
+        that.setData({
+          databox: res.data.datas
+        })
+      },
+      fail: function (res) {
+        console.log('获取卡券失败')
+       },
+    })
   },
 
   /**

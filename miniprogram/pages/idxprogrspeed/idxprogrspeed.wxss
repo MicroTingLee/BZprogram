@@ -1,7 +1,7 @@
 /* pages/idxprogrspeed/idxprogrspeed.wxss */
 
 .accelerate {
-  width: 750rpx;
+  width: 100%;
 }
 
 .accelerate .data {
@@ -12,83 +12,117 @@
 }
 
 .data .img {
-  width: 140rpx;
-  height: 120rpx;
-}
-
-.img image {
-  width: 140rpx;
-  height: 140rpx;
-  border-radius: 10rpx;
-  margin-top: 25rpx;
-}
-
-.data .user {
-  width: 230rpx;
-  height: 150rpx;
-  margin-top: 20rpx;
-  margin-left: 10rpx;
-}
-
-.user .name {
-  width: 200rpx;
-  font-size: 25rpx;
-  color: #333;
-  display: flex;
-  margin-top: 10rpx;
-}
-
-.name image {
-  width: 35rpx;
-  height: 35rpx;
-}
-
-.name text {
-  display: block;
-  margin-top: 5rpx;
-  padding-left: 5rpx;
-}
-
-.time {
-  width: 320rpx;
-  font-size: 27rpx;
-  margin-left: 5rpx;
-  margin-top: 20rpx;
-}
-
-.time .shij {
+  width: 22%;
+  height: 170rpx;
+  padding-top: 20rpx;
+  padding-left: 15rpx;
   text-align: center;
 }
-
-.time .quan {
-  width: 300rpx;
-  margin-left: 15rpx;
+.img image {
+  width: 145rpx;
+  height: 150rpx;
+  border-radius: 10rpx;
+}
+/* 用户信息 */
+.data .speed_user {
+  width: 73%;
+  height: 150rpx;
+  margin: 20rpx 0;
+  color: #777;
+  font-size: 27rpx;
+}
+.speed_user .speed_head{
+  width: 100%;
+  display: flex;
+  height: 50rpx;
+  font-size: 28rpx;
+  justify-content: space-between;
+}
+.speed_head .name{
+  width: 45%;
+  display: flex;
+}
+.speed_head image{
+  width: 35rpx;
+  height: 35rpx;
+   margin-right: 5rpx;
+}
+.speed_head .time{
+  width: 50%;
+  white-space: nowrap;
+}
+/* 方式： */
+.speed_user  .speed_center {
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5rpx;
+}
+.speed_center .cen_left {
+  width: 40%;
   display: flex;
 }
 
-.quan image {
+.cen_left image {
   width: 35rpx;
   height: 35rpx;
-  margin-top: 20rpx;
+}
+.fanshi{
+  white-space: nowrap;
+}
+.fanshi text{
+color: #777;
 }
 
-.quan .yhq {
-  margin-top: 20rpx;
-  margin-left: 10rpx;
+.cen_right {
+  width: 50%;
+  display: flex;
+  padding: 7rpx 0 0 10rpx;
 }
 
-.yhq .jg {
-  color: red;
+.cen_right image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 5rpx;
+  margin-top: 5rpx;
 }
-.ac_dp {
+
+.cen_right .yhq {
+  white-space: nowrap
+}
+.yhq text {
+  color: #f00;
+}
+
+/* 普通报账 */
+
+.speed_user  .speed_bottom {
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.speed_bottom .bot_left {
+  width: 40%;
   display: flex;
 }
 
-.ac_dp image {
-  width: 35rpx;
-  height: 35rpx;
-  margin: 15rpx 0 0 20rpx;
+.bot_left image {
+  width: 30rpx;
+  height: 30rpx;
+  padding-right: 5rpx;
 }
-.ac_dp .dp_name{
-  margin: 15rpx 0 0 15rpx;
+
+.bot_right {
+  width: 50%;
+  display: flex;
+  padding: 5rpx 0 0 10rpx;
+}
+
+.bot_right image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 5rpx;
+  margin-top: 5rpx;
 }

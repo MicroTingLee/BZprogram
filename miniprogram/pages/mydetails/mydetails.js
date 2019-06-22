@@ -1,12 +1,12 @@
-// pages/mybzspeed/mybzspeed.js
-const app = getApp()
+// pages/mydetailed/mydetailed.js
+const app=getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    databox:[]
+   databox:[],
   },
 
   /**
@@ -30,25 +30,26 @@ Page({
     var that = this
     var token = app.globalData.token
     var cardnum = wx.getStorageSync('cardnum')
+    var unionid = wx.getStorageSync('unionid')
+    console.log(unionid,'unionid')
     console.log(cardnum)
     console.log(token)
     wx.request({
-      url: 'https://mcs.lingdie.com/wechat/bzhomexcx/speedupmx',
+      url: 'https://mcs.lingdie.com/wechat/Bzlogicxcx/getreturn',
       data: {
         token: token,
-        type: 3,
-        cardnum: cardnum
+        cardnum: cardnum,
+        unionid:unionid
       },
       header: {
         'content-type': 'application/json' //默认值
       },
       method: 'POST',
       success: function (res) {
-        console.log(res, '我的报账加速页面')
+        console.log(res.data.data, '兑换明细')
         that.setData({
-          databox: res.data
+          databox: res.data.data
         })
-
       },
       fail: function (res) {
         console.log('获取报账成功失败')

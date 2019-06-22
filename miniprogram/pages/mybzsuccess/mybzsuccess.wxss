@@ -1,9 +1,9 @@
 /* pages/mybzsuccess/mybzsuccess.wxss */
-.success {
-  width: 750rpx;
+.mybzsuccess {
+  width: 100%;
 }
 
-.success .data {
+.mybzsuccess .data {
   width: 100%;
   height: 200rpx;
   display: flex;
@@ -11,66 +11,92 @@
 }
 
 .data .img {
-  width: 140rpx;
-  height: 120rpx;
+  width: 22%;
+  height: 170rpx;
+  padding-top: 20rpx;
+  padding-left: 15rpx;
+  text-align: center;
 }
-
 .img image {
-  width: 140rpx;
-  height: 140rpx;
+  width: 145rpx;
+  height: 150rpx;
   border-radius: 10rpx;
-  margin-top: 25rpx;
 }
 
 .data .user {
-  width: 60%;
+  width: 73%;
   height: 150rpx;
-  margin-top: 20rpx;
-  margin-left: 20rpx;
+  margin: 20rpx 0;
+  color: #777;
 }
-
-.user .name {
+/* 用户名行 */
+.user .mysucc_head{
   width: 100%;
-  font-size: 31rpx;
-  color: #333;
   display: flex;
-  margin-top: 5rpx;
+  height: 50rpx;
+  font-size: 28rpx;
+  justify-content: space-between;
 }
+.mysucc_head .name{
+  width: 45%;
+  display: flex;
+}
+.mysucc_head image{
+  width: 35rpx;
+  height: 35rpx;
+   margin-right: 5rpx;
+}
+.mysucc_head .time{
+  white-space: nowrap;
+}
+/* 普通报账行 */
+.user .mysucc_center{
+  width: 100%;
+  display: flex;
+  height: 50rpx;
+  font-size: 28rpx;
+  justify-content: space-between;
+  margin-top: 10rpx;
+}
+.mysucc_center .su_puto{
+  width: 45%;
+  display: flex;
+  white-space: nowrap;
 
-.name image {
-  width: 30rpx;
-  height: 30rpx;
-  margin-top: 5rpx;
 }
-
-.name text {
-  display: block;
-  padding-left: 5rpx;
-  margin-top: 3rpx;
-
+.su_puto image{
+  width: 35rpx;
+  height: 35rpx;
+   margin-right: 5rpx;
 }
-.time{
-  width: 30%;
-  font-size: 30rpx;
-  margin-left: 10rpx;
-  margin-top: 20rpx;
-
-}
-.time .shij{
- text-align: center;
-}
-.time .quan{
-  width: 300rpx;
-margin-left:10rpx; 
-display: flex;
+.quan{
+  width: 48%;
+  display: flex;
+  white-space: nowrap;
 }
 .quan image{
-  width: 40rpx;
-  height: 40rpx;
-  margin-top: 15rpx;
+  width: 35rpx;
+  height: 35rpx;
+  margin-right: 5rpx;
 }
-.quan .yhq{
-  margin-top: 15rpx;
-  margin-left: 10rpx;
-  color: red;
+.yhq{
+  color: #f00;
+}
+/* //店铺行 */
+.user .mysucc_bottom{
+  width: 100%;
+  display: flex;
+  height: 50rpx;
+  font-size: 28rpx;
+  justify-content: space-between;
+  margin-top: 5rpx;
+}
+.su_dianpu{
+  display: flex;
+  width: 100%;
+}
+.mysucc_bottom image{
+  width: 35rpx;
+  height: 35rpx;
+  margin-right: 5rpx;
 }

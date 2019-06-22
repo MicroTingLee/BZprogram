@@ -73,6 +73,5 @@ App({
     gsecret: '539d35d13c8f6bca5a61b0f7545d52df',
     oppenid:'',
     session_key:'',
-    cardnum: 'bz1559196271844',
   }
 })

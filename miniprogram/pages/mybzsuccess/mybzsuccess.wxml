@@ -1,15 +1,61 @@
 <!--pages/mybzsuccess/mybzsuccess.wxml-->
 <!--我的页 报账成功-->
-<view class='success'>
-  <view class='data'>
-    <view class='img'>
-      <image src='../../images/suc.jpg'></image>
+<view class='container'>
+  <!--报账成功-->
+  <view class='mybzsuccess'>
+      <view class='data' wx:for="{{databox}}" wx:for-item="items" wx:for-index="idx" wx:key="item*">
+      <view class='img'>
+        <image src='{{items.headimgurl}}'></image>
+      </view>
+      <!-- 用户信息 -->
+      <view class='user'>
+        <!-- 用户名行 -->
+        <view class='mysucc_head'>
+          <view class='name'>
+            <image src='../../images/yh.png'></image>
+            <view class='su_name'>
+              <text>{{items.nickname}}</text>
+            </view>
+          </view>
+           <view class='quan'>
+            <image src='../../images/quan.png'></image>
+            <view class='yhq'>{{items.facevalue}}元</view>
+          </view>
+        </view>
+        <!-- 普通报账行 -->
+        <view class='mysucc_center'>
+          <view class='su_puto'>
+            <image src='../../images/jy02.png'></image>
+            <view class='puto'>
+              <text>普通报账</text>
+            </view>
+          </view>
+        </view>
+        <!-- 店铺行 -->
+        <view class='mysucc_bottom'>
+          <view class='su_dianpu'>
+            <image src='../../images/shangc.png'></image>
+            <view class='puto'>
+              <text>{{items.name}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
     </view>
+  </view>
+</view>
+
+
+<!-- <view class='success'>
+  <view class='data' wx:for="{{databox}}" wx:for-item="items" wx:for-index="idx" wx:key="item*">
+    <view class='img'>
+      <image src='{{items.headimgurl}}'></image>
+    </view> -->
     <!-- 用户信息 -->
-    <view class='user'>
+    <!-- <view class='user'>
       <view class='name'>
         <image src='../../images/js03.png'></image>
-        <text>2019-06-03 11:50:54</text>
+        <text>{{items.addtime}}</text>
       </view>
       <view class='name'>
         <image src='../../images/bt.png'></image>
@@ -17,7 +63,7 @@
       </view>
       <view class='name'>
         <image src='../../images/js05.png' class='dp'></image>
-        <text>吾悦店</text>
+        <text>{{items.name}}</text>
       </view>
     </view>
     <view class='time'>
@@ -25,9 +71,9 @@
       <view class='quan'>
         <view class='quan'>
           <image src='../../images/quan.png'></image>
-          <view class='yhq'>1000元</view>
+          <view class='yhq'>{{items.facevalue}}元</view>
         </view>
       </view>
     </view>
   </view>
-</view>
+</view> -->

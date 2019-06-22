@@ -36,7 +36,8 @@ Page({
 
 paoma:function(){
   var token=app.globalData.token
-  var cardnum = app.globalData.cardnum
+  var cardnum = wx.getStorageSync('cardnum')
+  console.log(cardnum,'cardnum')
   console.log(token,'8989')
   console.log(cardnum,'77777')
   wx.request({
@@ -101,6 +102,7 @@ paoma:function(){
                 information: allinformations
               })
               wx.setStorageSync('allinformation', allinformations);
+              wx.setStorageSync('unionid', allinformations.unionId);
               wx.request({
                 url: 'https://mcs.lingdie.com/wechat/Bzegisterxcx/ruku',
                 method: 'POST',
@@ -109,7 +111,8 @@ paoma:function(){
                   'content-type': 'application/json' //默认值
                 },
                 success: res => {
-                  console.log(res.data.code, 99999999)
+                  console.log(res.data.cardnum,9999999999)
+                  wx.setStorageSync('cardnum','bz1560218690336');// 储存cardnum
                   this.paoma()
                 },
                 fail:res=>{

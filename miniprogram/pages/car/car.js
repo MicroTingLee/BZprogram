@@ -1,7 +1,7 @@
 // pages/car/car.js
+var wxbarcode = require('../../utils/index.js');
 const app = getApp()
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -12,6 +12,8 @@ Page({
     sheets:0,
     gkje: 0,
     yue: 0,
+    order:'',
+    time: 60
   },
   pay: function () {
     var inputvalue = this.data.inputvalue//输入的金额
@@ -55,15 +57,83 @@ Page({
       sheets:sheets,
       gkje:gkje,
       yue:yue,
-      tatalmoney: tatalmoney
+      tatalmoney: tatalmoney,
+      code:'hello'
     })
   },
   // 扫码支付
   saoma:function(){
-    this.setData({
-      zfceng:true
+    var that = this
+    var token = app.globalData.token
+    var cardnum = wx.getStorageSync('cardnum')
+    var allmoney = that.data.tatalmoney
+    console.log(cardnum)
+    console.log(token)
+    wx.request({
+      url: 'https://mcs.lingdie.com/wechat/Bzlogicxcx/ordersave',
+      data: {
+        token: token,
+        cardnum: cardnum,
+        allmoney:allmoney,
+       
+      },
+      header: {
+        'content-type': 'application/json' //默认值
+      },
+      method: 'POST',
+      success: function (res) {
+        console.log(res.data, '购买')  
+        var code=res.data.code
+        if(code==1){
+          var info = JSON.parse(res.data.info)
+          var order1 = info.order
+          console.log(order1, 'order111')
+          that.setData({
+            order: order1
+          })
+          var codes=JSON.parse(res.data.info)
+          var allmoney1 = String(that.data.tatalmoney)
+          codes.allmoney=allmoney1
+          var codes1=JSON.stringify(codes)
+          console.log(codes1,'info')
+          wxbarcode.qrcode('qrcode', codes1, 260,260);
+          that.setData({
+            zfceng:true
+          })
+          console.log('成功')
+        } else if (code == 4){
+          console.log('有订单未支付')
+        }
+
+      },
+      fail: function (res) {
+        console.log('购卡失败')
+      }
+    }) 
+  },
+  // 支付轮巡
+  xunhuan:function(){
+    setTimeout(this.xunhuan(),5000)
+    var that = this
+    var order1 = that.data.order
+    console.log(order,'order')
+    wx.request({
+      url: 'https://mcs.lingdie.com/wechat/Bzlogicxcx/lunxun',
+      method: 'POST',
+      data: {
+        token: token,
+        order:order1
+      },
+      header: {
+        'content-type': 'application/json' //默认值
+      },
+      success: function (res) {
+       console.log(res)
+      },
+      fail: function (res) { }
     })
   },
+  // 关闭二维码
   zfcancel:function(){
     console.log(123)
     this.setData({

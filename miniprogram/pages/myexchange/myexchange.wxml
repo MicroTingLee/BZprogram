@@ -22,15 +22,17 @@
     </view>
   </view>
   <!-- /* 第二条兑换券样式动态 */ -->
-  <view class='duih_card'>
+  <view class='duih_card' wx:for="{{databox}}"  wx:for-item="items" wx:for-index="idx" wx:key="this*" >
     <view class='valu'>
       <view class='val_jg'>
-        <text>￥</text>5000:00</view>
+        <text>￥</text>{{items.money}}</view>
       <view class='quan'>报账券</view>
     </view>
     <!-- 好友加速 -->
     <view class='haoyou'>
-      <view class='jiaos'>好友加速</view>
+      <view class='jiaos' wx:if="{{items.type==0}}">保障卡</view>
+      <view class='jiaos' wx:if="{{items.type==2}}">经验值加速</view>
+      <view class='jiaos' wx:else>好友加速</view>
       <view>可用于商城消费与合伙人计划</view>
     </view>
     <view class='rad'>
@@ -38,20 +40,20 @@
     </view>
   </view>
 <!-- /* 兑换券样式动态 */ -->
-  <view class='duih_card'>
+  <!-- <view class='duih_card'>
     <view class='valu'>
       <view class='val_jg'>
         <text>￥</text>50:00</view>
       <view class='quan'>报账券</view>
-    </view>
+    </view> -->
     <!-- 好友加速 -->
-    <view class='haoyou'>
+    <!-- <view class='haoyou'>
       <view class='jiaos'>好友加速</view>
       <view>可用于商城消费与合伙人计划</view>
     </view>
     <view class='rad'>
       <radio></radio>
     </view>
-  </view>
+  </view> -->
   <view class='duix'> 兑现</view>
 </view>

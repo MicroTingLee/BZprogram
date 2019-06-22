@@ -1,0 +1,16 @@
+/* pages/idxcumul/idxcumul.wxss */
+.cumul{
+  width: 100%;
+}
+.culmul_content{
+  width: 100%;
+  height: 180rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.cumul .cul_img{
+  width: 23%;
+}
+.cul_img image{
+  width: 160rpx;
+  height: 160rpx;
+}

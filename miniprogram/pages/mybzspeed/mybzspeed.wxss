@@ -1,7 +1,9 @@
 /* pages/mybzspeed/mybzspeed.wxss */
+
 .success {
   width: 750rpx;
 }
+
 .success .data {
   width: 100%;
   height: 200rpx;
@@ -10,64 +12,123 @@
 }
 
 .data .img {
-  width: 140rpx;
-  height: 140rpx;
+  width: 21%;
+  height: 170rpx;
+  padding-left: 15rpx;
+  margin-top: 15rpx;
 }
 
 .img image {
-  width: 140rpx;
-  height: 140rpx;
+  width: 150rpx;
+  height: 150rpx;
   border-radius: 10rpx;
-  margin-top: 30rpx;
 }
 
 .data .user {
-  width: 55%;
+  width: 72%;
   height: 150rpx;
-  margin-top: 20rpx;
-  margin-left: 8rpx;
+  margin-top: 15rpx;
+  font-size: 27rpx;
+}
+.user .jiasu_head {
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.jiasu_head .js_name {
+  width: 40%;
+  display: flex;
+  padding: 7rpx 0 0 15rpx;
 }
 
-.user .name {
-  width: 100%;
-  font-size: 26rpx;
-  color: #777;
+.js_name image {
+  width: 30rpx;
+  height: 30rpx;
+  padding-right: 5rpx;
+}
+.laiyuan text{
+color: #777;
+}
+.huode {
+  width: 50%;
   display: flex;
+  padding: 7rpx 0 0 10rpx;
+}
+
+.huode image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 5rpx;
   margin-top: 5rpx;
 }
 
-.name image {
+.huode .hd_txt {
+  white-space: nowrap
+}
+.hd_txt text {
+  color: #f00;
+}
+/* 时间行 */
+.jiasu_center{
+  width: 100%;
+  height: 50rpx;
+}
+.jiasu_center .time{
+  width: 100%;
+  display: flex;
+}
+.time image{
   width: 30rpx;
   height: 30rpx;
-  margin-top: 10rpx;
+  padding-left: 15rpx;
+  padding-right: 5rpx;
+   white-space: nowrap
 }
-
-.name text {
-  display: block;
-  padding-left: 5rpx;
-  margin-top: 10rpx;
-
+.shij text{
+  color: #777;
 }
-.time{
-  width: 32%;
-  font-size: 27rpx;
-  margin-top: 20rpx;
+/* 门店 */
+.jiasu_bottom{
+  width: 100%;
+  height: 50rpx;
 }
-.time .shij{
- text-align: center;
+.jiasu_bottom .time{
+  width: 100%;
+  display: flex;
 }
-.time .quan{
-width: 100%;
-display: flex;
-}
-.quan image{
+.time image{
   width: 30rpx;
-  height: 40rpx;
-  margin-top: 15rpx;
+  height: 30rpx;
+  padding-left: 15rpx;
+  padding-right: 5rpx;
 }
-.quan .yhq {
-  margin-top: 15rpx;
-  margin-left: 10rpx;
+.shij text{
+  color: #777;
 }
-.yhq text{
-  color: red;}
+/* 脚部按钮 */
+.foot{
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 20rpx;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+}
+.foot .quick,.jiyan{
+  width: 45%;
+  height: 100rpx;
+  background: #fff;
+  text-align: center;
+  line-height: 100rpx;
+  color: #fff;
+  border-radius: 10rpx;
+}
+.foot .quick{
+  background: rgb(251, 118, 180)
+}
+.foot .jiyan{
+  background: rgb(62, 218, 208)
+}

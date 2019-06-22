@@ -1,2 +1,52 @@
 <!--pages/myfriends/myfriends.wxml-->
-<text>pages/myfriends/myfriends.wxml</text>
+<!-- 我的好友 -->
+<view class='friend'>
+  <view class='my_friend' wx:for="{{databox}}" wx:for-item="items" wx:for-index="idx" wx:key="item*">
+    <!-- 循环 -->
+    <view class='img'>
+      <image src='{{items.headimgurl}}'></image>
+    </view>
+    <view class='friend_user'>
+      <!-- 用户名行 -->
+      <view class='fri_head'>
+        <view class='fri_name'>
+        <image src='../../images/ren.png'></image>
+          <view>
+            <text>{{items.realname}}</text>
+          </view>
+        </view>
+        <view class='time'>{{items.zctime}}</view>
+      </view>
+      <!-- 经验值行 -->
+      <view class='friend_center'>
+        <view class='fri_jiyan'>
+          <image src='../../images/jiasu4.png'></image>
+          <view class='jingyanzhi'>
+            <text>经验值:{{items.exp}}</text>
+          </view>
+        </view>
+        <view class='jiasu'>
+          <image src='../../images/quan.png' class='zshi'></image>
+          <view class='quick'>加速金额：
+            <text>{{items.money}}元</text>
+          </view>
+        </view>
+      </view>
+       <!-- 手机行 -->
+      <view class='friend_bottom'>
+        <view class='fri_phone'>
+          <image src='../../images/phone.png'></image>
+          <view class='shouj'>
+            <text>{{items.tel}}</text>
+          </view>
+        </view>
+        <view class='jiasu'>
+          <image src='../../images/js04.png'></image>
+          <view>
+            <text>{{items.name}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

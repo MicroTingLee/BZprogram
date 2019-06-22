@@ -2,7 +2,9 @@
  <!-- 邀请函 -->
     <view class='body'>
       <view class='head'></view>
-      <view class='ewm'></view>
+      <view class='ewm'>
+        <image src="{{hbimgurl}}"></image>
+      </view>
       <view class='bottom'>
         <view class="haibao_tu">
           <image src="../../images/changtiao.png" class='hx' />

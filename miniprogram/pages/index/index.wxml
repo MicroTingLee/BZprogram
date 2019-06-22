@@ -96,7 +96,7 @@
           <text>{{totalsuccess}}</text> 张</view>
       </navigator>
       <!-- 第二块 -->
-      <navigator class='kuai1'>
+      <navigator class='kuai1' url='../idxcumul/idxcumul'>
         <view class='kuai_j'>
           <text>￥</text>{{totalmoney}}</view>
         <view class='leiji'>累计报账金额</view>

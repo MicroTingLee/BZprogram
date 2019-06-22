@@ -1,13 +1,23 @@
 // pages/myorder/myorder.js
+const app=getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    currentTab: 0
   },
-
+  clickTab: function (e) {
+    var that = this;
+    if (this.data.currentTab === e.target.dataset.current) {
+      return false;
+    } else {
+      that.setData({
+        currentTab: e.target.dataset.current
+      })
+    }
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -26,7 +36,31 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    var that = this
+    var token = app.globalData.token
+    var cardnum = wx.getStorageSync('cardnum')
+    wx.request({
+      url: 'https://mcs.lingdie.com/wechat/Bzlogic/unpaid',
+      data: {
+        token: token,
+        cardnum: cardnum,
+        type:2
+      },
+      header: {
+        'content-type': 'application/json' //默认值
+      },
+      method: 'POST',
+      success: function (res) {
+        console.log(res, '我的订单')
+        that.setData({
+          databox: res.data
+        })
 
+      },
+      fail: function (res) {
+        console.log('获取订单失败')
+      }
+    })
   },
 
   /**

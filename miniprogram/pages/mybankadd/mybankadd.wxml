@@ -6,23 +6,24 @@
   </view>
   <view class="chikaren">
     <text>持卡人:</text>
-    <input type='text' class='name'></input>
+    <input type='text' class='name' bindinput="inputwatch1"></input>
     <image src='../../images/gt.png' class='gz'></image>
   </view>
   <view class="chikaren1">
     <text>持卡号:</text>
-    <input type='text' class='name'></input>
+    <input type='text' class='name' bindinput="inputwatch2"></input>
     <image src='../../images/kakaka2.png' class='gz'></image>
   </view>
   <view class="chikaren2">
     <text>银行名:</text>
-    <input type='text' class='name'></input>
+    <input type='text' class='name' bindinput="inputwatch3"></input>
     <image src='../../images/kakaka3.png' class='gz'></image>
   </view>
   <view class="chikaren3">
     <text>设置默认银行卡：</text>
-    <input type='text' class='name'></input>
-    <radio color='#37DCBE'></radio>
+    <checkbox-group bindchange="check">
+    <checkbox color='#37DCBE' ></checkbox>
+    </checkbox-group>
   </view>
-  <view class='baoc'>保存并且绑定</view>
+  <view class='baoc' bindtap='savecard'>保存并且绑定</view>
 </view>

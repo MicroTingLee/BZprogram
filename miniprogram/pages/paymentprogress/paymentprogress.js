@@ -5,9 +5,27 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    flag: true,
+    active: true,
   },
 
+  //加速报账弹窗
+  // 遮罩层显示
+  show: function () {
+    this.setData({ flag: false })
+  },
+  // 遮罩层隐藏
+  conceal: function () {
+    this.setData({ flag: true })
+
+  },
+  //立即赚钱经验值
+  appear: function () {
+    this.setData({ active: false })
+  },
+  hid: function () {
+    this.setData({ active: true })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

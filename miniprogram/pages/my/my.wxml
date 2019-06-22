@@ -27,7 +27,7 @@
           <view class='headbottom1'>
              <view class='headbtleft'>
                 <text class='bttext daidui'>{{yue}}</text>
-                <navigator url='../exchange/exchange'>待兑额</navigator>
+                <navigator url='../myexchange/myexchange'>待兑额</navigator>
              </view>
              <view class='headbtright'>
                 <text class='bttext experience'>{{exprience}}</text>
@@ -91,7 +91,7 @@
                        <image src='../../images/gr3.png'></image>
                       <text class='fctxt'>券款兑换</text>
                   </navigator>
-                  <navigator>
+                  <navigator url='../mydetails/mydetails'>
                        <image src='../../images/dhmx.png'></image>
                       <text class='fctxt'>兑换明细</text>
                   </navigator>

@@ -1,11 +1,12 @@
 // pages/myfriends/myfriends.js
+var app=getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    databox:[]
   },
 
   /**
@@ -26,7 +27,32 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    var that = this
+    var token = app.globalData.token
+    var cardnum = wx.getStorageSync('cardnum')
+    console.log(cardnum)
+    console.log(token)
+    wx.request({
+      url: 'https://mcs.lingdie.com/wechat/Bzoneselfxcx/myfriend',
+      data: {
+        token: token,
+        cardnum: cardnum
+      },
+      header: {
+        'content-type': 'application/json' //默认值
+      },
+      method: 'POST',
+      success: function (res) {
+        console.log(res.data, '我的好友')
+        that.setData({
+          databox: res.data
+        })
 
+      },
+      fail: function (res) {
+        console.log('获我的好友失败')
+      }
+    })
   },
 
   /**

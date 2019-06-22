@@ -27,6 +27,12 @@ page{
   background: url('https://yx.lingdie.com/images/image_app/style1/shaoma.png') no-repeat center;
   background-size: 80% 80%;
   margin: 0 auto;
+  
+}
+.ewm>image{
+  width: 360rpx;
+  height: 360rpx;
+  margin: 120rpx 170rpx;
 }
 .body .bottom{
   position: absolute;

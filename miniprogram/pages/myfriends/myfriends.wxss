@@ -1,1 +1,119 @@
 /* pages/myfriends/myfriends.wxss */
+.friend {
+  width: 100%;
+}
+.friend .my_friend {
+  width: 100%;
+  height: 180rpx;
+  display: flex;
+  border-bottom: 1rpx solid #ccc;
+  justify-content: space-between;
+}
+
+.my_friend .img {
+  width: 23%;
+  height: 180rpx;
+  padding: 15rpx 0rpx 0 15rpx;
+  box-sizing: border-box;
+}
+.img image {
+  width: 150rpx;
+  height: 150rpx;
+}
+
+/* 用户信息 */
+.friend_user{
+  width: 73%;
+  height: 150rpx;
+  font-size: 27rpx;
+  margin-top: 15rpx;
+}
+.friend_user .fri_head{
+  width: 100%;
+  display: flex;
+  height: 50rpx;
+}
+
+.fri_head .fri_name{
+  width: 40%;
+  display: flex;
+}
+.fri_name image{
+  width: 30rpx;
+  height: 30rpx;
+  padding-right: 15rpx;
+}
+.fri_head .time{
+  white-space: nowrap;
+}
+/* 经验值行 */
+.friend_center{
+  width: 100%;
+  height: 40rpx;
+  display: flex;
+  margin-top: 5rpx;
+}
+.friend_center .fri_jiyan{
+  width: 40%;
+  display: flex;
+}
+.fri_jiyan image{
+  width: 30rpx;
+  height: 30rpx;
+  padding-right: 10rpx;
+}
+.fri_jiyan .jingyanzhi{
+  white-space: nowrap;
+}
+.friend_center .jiasu{
+  width: 50%;
+  height: 50rpx;
+  display: flex;
+}
+.jiasu image{
+  width: 30rpx;
+  height: 30rpx;
+  padding: 5rpx 15rpx 0 5rpx;
+}
+ .jiasu .quick{
+  white-space: nowrap;
+}
+.quick text{
+  color: #f00;
+}
+/* 手机行 */
+.friend_bottom{
+  width: 100%;
+  height: 40rpx;
+  display: flex;
+  margin-top: 8rpx;
+}
+.friend_bottom .fri_phone{
+  width: 40%;
+  display: flex;
+}
+.fri_phone image{
+  width: 30rpx;
+  height: 30rpx;
+  padding-right: 10rpx;
+}
+.fri_phone .shouj{
+  white-space: nowrap;
+}
+.friend_bottom .jiasu{
+  width: 50%;
+  height: 50rpx;
+  display: flex;
+}
+.jiasu image{
+  width: 30rpx;
+  height: 30rpx;
+  padding: 5rpx 15rpx 0 5rpx;
+}
+ .jiasu .quick{
+  white-space: nowrap;
+}
+.quick text{
+  color: #f00;
+}
+

@@ -1,0 +1,94 @@
+
+/* pages/details/details.wxss */
+.details{
+  width: 100%
+}
+.user{
+  width: 100%;
+  height: 200rpx;
+  border-bottom: 1rpx solid #eee;
+  display: flex;
+  justify-content: space-around;
+}
+.user .img{
+  width: 23%;
+  height: 200rpx;
+  text-align: center;
+  padding-top: 15rpx;
+  box-sizing: border-box;
+}
+ .img image{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 10rpx;
+}
+.inform{
+  width: 73%;
+  height: 150rpx;
+  margin-top: 15rpx;
+}
+.in_head{
+  width: 100%;
+  height: 50rpx;
+  color: #777;
+  display: flex;
+  font-size: 28rpx;
+  justify-content: space-between;
+}
+.in_head image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.he_left,.he_right{
+  width: 45%;
+  display: flex;
+}
+.he_left .text{
+  margin-left: 10rpx;
+}
+.he_right .text{
+  color: #f00;
+  margin-left: 10rpx;
+}
+/* 日期行 */
+.in_center{
+  width: 100%;
+  height: 50rpx;
+  color: #777;
+  display: flex;
+  font-size: 28rpx;
+  justify-content: space-between;
+  margin-top: 5rpx;
+}
+.in_center image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.in_center .in_left{
+  width: 100%;
+  display: flex;
+}
+.in_center .text{
+  margin-left: 10rpx;
+}
+/* 店铺行 */
+.in_bottom{
+  width: 100%;
+  height: 50rpx;
+  color: #777;
+  display: flex;
+  font-size: 28rpx;
+  justify-content: space-between;
+  margin-top: 10rpx;
+}
+.in_bottom image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.in_bottom .in_left{
+  width: 100%;
+  display: flex;
+}
+.in_bottom .text{
+  margin-left: 10rpx;
+}

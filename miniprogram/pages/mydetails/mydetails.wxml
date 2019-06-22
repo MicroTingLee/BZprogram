@@ -1,0 +1,36 @@
+
+<!--pages/details/details.wxml-->
+<!-- 兑换明细 -->
+<view class='details' wx:for="{{databox}}"  wx:for-index="idx" wx:for-item="items" wx:key="idx*">
+  <view class='user'>
+    <view class='img'>
+      <image src='../../images/tx.jpg'></image>
+    </view>
+    <view class='inform'>
+      <view class='in_head'>
+        <view class='he_left'>
+          <image src='../../images/jiasu9.png'></image>
+          <view class='text'>进度：申请中</view>
+        </view>
+        <view class='he_right'>
+          <image src='../../images/quan.png'></image>
+          <view class='text'>{{items.tmoney}}元</view>
+        </view>
+      </view>
+      <!-- 日期行 -->
+      <view class='in_center'>
+        <view class='in_left'>
+          <image src='../../images/js03.png'></image>
+          <view class='text'>{{items.addtime}}</view>
+        </view>
+      </view>
+      <!-- 南京 -->
+     <view class='in_bottom'>
+        <view class='he_left'>
+          <image src='../../images/js05.png'></image>
+          <view class='text'>{{items.addr}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

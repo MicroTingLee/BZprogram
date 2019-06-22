@@ -68,10 +68,13 @@
         </view>
         <!-- 点击扫码支付弹出框 -->
         <view class='zhifuceng' wx:if="{{zfceng}}"  catchtouchmove='ture'>
+          <view class='zhifubox'>
+            <image class='zfcancel' bindtap='zfcancel' src='../../images/iconclose.png'></image>
             <view class='zfcengbox'>
-                <image class='zfcancel' bindtap='zfcancel' src='../../images/iconclose.png'></image>
                 <canvas canvas-id="qrcode"></canvas>
+                <text>还剩{{time}}s支付时间</text>
             </view>
+          </view>    
         </view>
     </view>
 </view>

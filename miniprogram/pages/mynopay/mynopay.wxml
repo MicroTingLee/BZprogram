@@ -1,13 +1,86 @@
 <!--pages/mynopay/mynopay.wxml-->
-<import src="../baozhang/baozhang.wxml"/>
-<import src="../shangcheng/shangcheng.wxml"/>
+<!--待支付-->
 <view class='pay'>
-<view class="swiper-tab">
+  <view class="swiper-tab">
     <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">报账卡</view>
     <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">商城</view>
-</view>
-<swiper current="{{currentTab}}" duration="300"  bindchange="swiperTab">
-    <swiper-item ><template is="baozhang"/></swiper-item>
-    <swiper-item><template is="shangcheng"/></swiper-item>
-</swiper>
+  </view>
+  <swiper current="{{currentTab}}" duration="300" bindchange="swiperTab" class='swiper'>
+    <!-- 报账页 -->
+    <swiper-item catchtouchmove="forbidMove">
+      <view class='tb'>
+        <view class='head'>
+          <view class='img'>
+            <image src='../../images/sy.png'></image>
+          </view>
+          <text class='sear'>待付款订单为您保留至当日晚上24时</text>
+        </view>
+        <view class='content' wx:for="{{databox}}" wx:for-item="items" wx:for-index="idx" wx:key="idx*">
+          <view class='con_left'>
+            <image src='../../images/dhmx.png'></image>
+          </view>
+          <!-- 右边详情 -->
+          <view class='con_right'>
+            <view class='r_head'>
+              <view class='danhao'>
+                <text>单号:{{items.ordernum}}</text></view>
+              <view class='riq'>{{items.addtime}}</view>
+            </view>
+            <view class='r_center'>
+              <view>商城×
+                <text>{{items.ka_num}}</text> </view>
+              <view class='hji'>合计:
+                <text>￥{{items.z_money}}</text> </view>
+              <view class='fuk' bindtap='zhifu' data-ordernum="{{items.ordernum}}">付款</view>
+            </view>
+            <view class='r_bottom'>
+              <view>{{items.name}}</view>
+              <view class='del' data-id="{{items.id}}" bindtap='del'>删除订单</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='ceng' wx:if="{{showcen}}">
+           <view class='zfcengbox'>
+                <image class='zfcancel' bindtap='zfcancel' src='../../images/iconclose.png'></image>
+                <canvas canvas-id="qrcode"></canvas>
+            </view>
+      </view>
+    </swiper-item>
+    <!-- 商城页 -->
+    <swiper-item catchtouchmove="forbidMove">
+      <view class='tb'>
+    <view class='head'>
+      <view class='img'>
+        <image src='../../images/sy.png'></image>
+      </view>
+      <text class='sear'>待付款订单为您保留至当日晚上24时</text>
+    </view>
+    <view class='content'>
+      <view class='con_left'>
+        <image src='../../images/tx.png'></image>
+      </view>
+      <!-- 右边详情 -->
+      <view class='con_right'>
+        <view class='r_head'>
+          <view class='danhao'>
+            <text>单号:</text>482 </view>
+          <view class='riq'>2019-06-13 16:00</view>
+        </view>
+        <view class='r_center'>
+          <view>商城×
+            <text>1</text> </view>
+          <view class='hji'>合计:
+            <text>￥1000.00</text> </view>
+          <view class='fuk'>付款</view>
+        </view>
+        <view class='r_bottom'>
+         <view>吾悦店</view>
+         <view class='del'>删除订单</view>
+        </view>
+      </view>
+    </view>
+  </view>
+    </swiper-item>
+  </swiper>
 </view>

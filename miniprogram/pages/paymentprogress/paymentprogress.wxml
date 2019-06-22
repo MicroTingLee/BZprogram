@@ -25,7 +25,6 @@
       <image src='https://yx.lingdie.com/images/image_app/style1/ticket2.png'></image>
       <text>—</text>
     </view>
-    <!-- 我的报账数据 -->
     <view class='baoz'>
       <image src='../../images/yiyong.png'></image>
       <text>0/</text>
@@ -33,7 +32,6 @@
       <text>0</text>
     </view>
   </view>
-  <!-- 报账成功卡片 -->
   <view class='mokuai'>
     <view class='kuai'>
       <!-- 第一块 -->
@@ -73,7 +71,83 @@
     </text>
   </view>
   <view class='bottom'>
-    <navigator class='jiasu'>加速报账</navigator>
-    <navigator class='zhaunqu'>立即赚取经验值</navigator>
+    <navigator class='jiasu' bindtap='show'>加速报账</navigator>
+    <navigator class='zhaunqu' bindtap='appear'>立即赚取经验值</navigator>
   </view>
 </view>
+<!-- 加速报账弹窗 -->
+<view>
+  <view class="zhezao" hidden="{{flag}}">
+    <view class="t_w">
+      <!--取消图标开始-->
+      <view class="t_image" bindtap="conceal">
+        <image class="t_image1" src="../../images/iconclose.png"></image>
+      </view>
+      <!--取消图标结束-->
+      <!--弹出框开始-->
+      <view class="tanchu_view">
+        <view>
+          <!--抱歉开始-->
+          <view class="txtsure">
+          </view>
+          <!--抱歉结束-->
+          <view class='txt'>经验值不足，无法兑换</view>
+        </view>
+      </view>
+      <!--弹出框结束-->
+    </view>
+  </view>
+</view>
+
+<view>
+  <view class="liji" hidden="{{active}}">
+    <view class="t_li">
+      <!--取消图标开始-->
+      <image class="t_image" bindtap="hid" src='../../images/iconclose.png'></image> >
+      <!--取消图标结束-->
+      <!--弹出框开始-->
+      <view class="tanchu_box">
+        <view>
+          <!--抱歉开始-->
+          <view class="title">
+            邀请好友加速报账
+          </view>
+          <!--中间图片-->
+          <view class='txt'>
+            <image src='../../images/shandian.png'></image>
+          </view>
+          <view class='yaoq'>已邀请0位好友</view>
+          <view class='ful'>“邀请好友越多，加速越快哦”</view>
+          <view class='sxu'>
+            <view class='jt'>
+              <image src='../../images/sxu.png'></image>
+            </view>
+            <view class='hen'>
+              <image src='../../images/heng2.png'></image>
+            </view>
+            <view class='jt'>
+              <image src='../../images/sxu.png'></image>
+            </view>
+            <view class='hen'>
+              <image src='../../images/heng2.png'></image>
+            </view>
+            <view class='jt'>
+              <image src='../../images/sxu.png'></image>
+            </view>
+            <view class='hen'>
+              <image src='../../images/heng2.png'></image>
+            </view>
+            <view class='jt'>
+              <image src='../../images/sxu.png'></image>
+            </view>
+          </view>
+          <view class='text'>邀请好友 好友报名参加 好友到店消费 获得加速</view>
+          <navigator class='shengc' url='../poster/poster'>生成海报</navigator>
+        </view>
+      </view>
+      <!--弹出框结束-->
+    </view>
+  </view>
+</view>
+
+
