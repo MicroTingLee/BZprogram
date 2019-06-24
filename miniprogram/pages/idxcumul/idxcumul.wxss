@@ -5,12 +5,70 @@
 .culmul_content{
   width: 100%;
   height: 180rpx;
-  border-bottom: 1rpx solid #ccc;
+  border-bottom: 1rpx solid #eee;
+  display: flex;
 }
-.cumul .cul_img{
-  width: 23%;
+.culmul_content .cul_img{
+  width: 25%;
+  height: 180rpx;
+  padding: 10rpx 0 0 15rpx;
+  box-sizing: border-box;
 }
 .cul_img image{
   width: 160rpx;
   height: 160rpx;
+}
+.cul_cont{
+  width: 70%;
+  height: 160rpx;
+  margin-top: 15rpx;
+  font-size: 27rpx;
+  color: #333;
+}
+.cul_cont image{
+  width: 30rpx;
+  height: 30rpx;
+  padding-right: 10rpx;
+}
+.cul_cont .cul_head{
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+}
+.cul_head .name{
+  width: 40%;
+  display: flex;
+  white-space: nowrap;
+}
+.cul_head .time{
+  width: 55%;
+  display: flex;
+  white-space: nowrap;
+  font-size: 25rpx;
+  text-align: center;
+}
+/* 券行 */
+.cul_center{
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  margin-top: 10rpx;
+}
+.cul_center .quan{
+  width: 40%;
+  display: flex;
+  white-space: nowrap;
+}
+.quan text{
+  color: #f00;
+}
+.cul_center .puto{
+  display: flex;
+  white-space: nowrap;
+}
+/* 店铺行 */
+.cul_bottom{
+  width: 100%;
+  height: 50rpx;
+  display: flex;
 }

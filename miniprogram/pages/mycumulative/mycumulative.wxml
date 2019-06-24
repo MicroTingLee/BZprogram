@@ -1,0 +1,73 @@
+<!--pages/mycumulative/mycumulative.wxml-->
+<!-- 报账进度里面的累计报账 -->
+<view class='mycumulactive'>
+<!-- 第一条 -->
+  <view class='mycumu_data'>
+    <view class='mycu_img'>
+      <image src='../../images/tx.png'></image>
+    </view>
+    <view class='mycu_content'>
+      <!-- 用户名行 -->
+      <view class='mycu_head'>
+        <view class='mycu_name'>
+          <image src='../../images/ren.png'></image>
+          <view>
+            <text>哈喽</text>
+          </view>
+        </view>
+        <view class='time'>
+          <text>2019-06-03 11:55:04</text>
+        </view>
+      </view>
+      <!-- 券行 -->
+      <view class='mycu_center'>
+       <image src='../../images/jsquan.png'></image>
+       <view>
+         <text>120.00元</text>
+       </view>
+      </view>
+      <!-- 报账门店行 -->
+      <view class='mycu_bottom'>
+       <image src='../../images/js05.png'></image>
+       <view>
+       <text>报账门店：吾悦店</text>
+       </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 第二条 -->
+  <view class='mycumu_data'>
+    <view class='mycu_img'>
+      <image src='../../images/suc.jpg'></image>
+    </view>
+    <view class='mycu_content'>
+      <!-- 用户名行 -->
+      <view class='mycu_head'>
+        <view class='mycu_name'>
+          <image src='../../images/ren.png'></image>
+          <view>
+            <text>哈喽</text>
+          </view>
+        </view>
+        <view class='time'>
+          <text>2019-06-03 11:55:04</text>
+        </view>
+      </view>
+      <!-- 券行 -->
+      <view class='mycu_center'>
+       <image src='../../images/jsquan.png'></image>
+       <view>
+         <text>120.00元</text>
+       </view>
+      </view>
+      <!-- 报账门店行 -->
+      <view class='mycu_bottom'>
+       <image src='../../images/js05.png'></image>
+       <view>
+       <text>报账门店：吾悦店</text>
+       </view>
+      </view>
+    </view>
+  </view>
+</view>

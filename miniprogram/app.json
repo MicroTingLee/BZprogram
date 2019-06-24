@@ -16,6 +16,7 @@
     "pages/myorder/myorder",
     "pages/mynopay/mynopay",
     "pages/myexchange/myexchange",
+    "pages/mycumulative/mycumulative",
     "pages/mybzspeed/mybzspeed",
     "pages/mybank/mybank",
     "pages/mybankadd/mybankadd"

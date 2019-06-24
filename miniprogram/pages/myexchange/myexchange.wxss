@@ -120,6 +120,9 @@ text-align: center;
   line-height: 200rpx;
   text-align: center;
 }
+.rad>checkbox{
+  border-radius: 50%;
+}
 /* 兑现按钮 */
 .duix {
   width: 95%;

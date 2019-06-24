@@ -12,7 +12,7 @@
                     </view>
                     <view class='srinput'>
                         <text>￥</text>
-                        <input placeholder-class='inputph' type='number' placeholder='请输入购买金额' bindinput="checkinput"></input>
+                        <input placeholder-class='inputph' placeholder='请输入购买金额' bindinput="checkinput" value='{{inputvalue}}'></input>
                     </view>
                </view>
                <!-- 展示部分 -->
@@ -63,7 +63,7 @@
             <view class='buybox'>
                   <view class='bb'>本次购买<text>1</text>张,总计1000元</view>
                   <button class='smzhifu' bindtap='saoma'>扫码支付</button>
-                  <button class='cancel'>取消</button>
+                  <button class='cancel' bindtap='smcancel'>取消</button>
             </view>
         </view>
         <!-- 点击扫码支付弹出框 -->

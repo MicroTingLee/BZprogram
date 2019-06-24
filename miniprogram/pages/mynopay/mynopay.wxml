@@ -23,7 +23,8 @@
           <view class='con_right'>
             <view class='r_head'>
               <view class='danhao'>
-                <text>单号:{{items.ordernum}}</text></view>
+                <text>单号:{{items.ordernum}}</text>
+              </view>
               <view class='riq'>{{items.addtime}}</view>
             </view>
             <view class='r_center'>
@@ -41,46 +42,56 @@
         </view>
       </view>
       <view class='ceng' wx:if="{{showcen}}">
-           <view class='zfcengbox'>
-                <image class='zfcancel' bindtap='zfcancel' src='../../images/iconclose.png'></image>
-                <canvas canvas-id="qrcode"></canvas>
-            </view>
+        <view class='zfcengbox'>
+          <image class='zfcancel' bindtap='zfcancel' src='../../images/iconclose.png'></image>
+          <canvas canvas-id="qrcode"></canvas>
+        </view>
       </view>
     </swiper-item>
     <!-- 商城页 -->
     <swiper-item catchtouchmove="forbidMove">
       <view class='tb'>
-    <view class='head'>
-      <view class='img'>
-        <image src='../../images/sy.png'></image>
-      </view>
-      <text class='sear'>待付款订单为您保留至当日晚上24时</text>
-    </view>
-    <view class='content'>
-      <view class='con_left'>
-        <image src='../../images/tx.png'></image>
-      </view>
-      <!-- 右边详情 -->
-      <view class='con_right'>
-        <view class='r_head'>
-          <view class='danhao'>
-            <text>单号:</text>482 </view>
-          <view class='riq'>2019-06-13 16:00</view>
+        <view class='head'>
+          <view class='img'>
+            <image src='../../images/sy.png'></image>
+          </view>
+          <text class='sear'>待付款订单为您保留至当日晚上24时</text>
         </view>
-        <view class='r_center'>
-          <view>商城×
-            <text>1</text> </view>
-          <view class='hji'>合计:
-            <text>￥1000.00</text> </view>
-          <view class='fuk'>付款</view>
-        </view>
-        <view class='r_bottom'>
-         <view>吾悦店</view>
-         <view class='del'>删除订单</view>
+        <view class='content'>
+          <view class='con_left'>
+            <image src='../../images/tx.png'></image>
+          </view>
+          <!-- 右边详情 -->
+          <view class='con_right'>
+            <view class='r_head'>
+              <view class='danhao'>
+                <text>单号:</text>482 </view>
+              <view class='riq'>2019-06-13 16:00</view>
+            </view>
+            <view class='r_center'>
+              <view>商城×
+                <text>1</text> </view>
+              <view class='hji'>合计:
+                <text>￥1000.00</text> </view>
+              <view class='fuk'>付款</view>
+            </view>
+            <view class='r_bottom'>
+              <view>吾悦店</view>
+              <view class='del'>删除订单</view>
+            </view>
+          </view>
         </view>
       </view>
-    </view>
-  </view>
     </swiper-item>
+    <!-- 点击付款的弹出层 -->
+    <view class='zhifuceng' wx:if="{{zfceng}}"  catchtouchmove='ture'>
+          <view class='zhifubox'>
+            <image class='zfcancel' bindtap='zfcancel' src='../../images/iconclose.png'></image>
+            <view class='zfcengbox'>
+                <canvas canvas-id="qrcode"></canvas>
+                <text>还剩{{time}}s支付时间</text>
+            </view>
+          </view>    
+        </view>
   </swiper>
 </view>

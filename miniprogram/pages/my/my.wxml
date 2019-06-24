@@ -87,7 +87,7 @@
                       <image src='../../images/gr2.png'></image>
                       <text class='fctxt'>我的好友</text>
                   </navigator>
-                  <navigator>
+                  <navigator  url='../myexchange/myexchange'>
                        <image src='../../images/gr3.png'></image>
                       <text class='fctxt'>券款兑换</text>
                   </navigator>

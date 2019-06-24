@@ -9,6 +9,7 @@ Page({
     databox:[]
   },
   zhux:function(e){
+    var that=this
     console.log(this,'zhuxua')
     console.log(e,'e')
     var id=e.currentTarget.dataset.id
@@ -17,9 +18,7 @@ Page({
       title: '提示',
       content: '确认注销银行卡？',
       success(res) {
-        var that=this
         if (res.confirm) {
-          // var that = this
           var token = app.globalData.token
           var cardnum = wx.getStorageSync('cardnum')
           wx.request({
@@ -34,9 +33,10 @@ Page({
             },
             method: 'POST',
             success: function (res) {
+              that.huoqu()
               console.log(res, '注销银行卡')
             },
-            fail: function (res) {
+            fail: function (res) { 
               console.log('获取报账成功失败')
             }
           })

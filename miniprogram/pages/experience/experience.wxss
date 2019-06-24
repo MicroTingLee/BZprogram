@@ -12,6 +12,22 @@
   height: 320rpx;
 }
 
+.top .guize {
+  width: 100%;
+  height: 50rpx;
+  position: absolute;
+  top: 10rpx;
+  display: flex;
+  color: #fff;
+  font-size: 28rpx;
+}
+
+.guize image {
+  width: 35rpx;
+  height: 35rpx;
+  padding-right: 15rpx;
+  margin-left: 560rpx;
+}
 .em_card {
   width: 95%;
   height: 200rpx;
@@ -38,11 +54,76 @@
 }
 
 .center image {
-  width: 95rpx;
-  height: 110rpx;
-  margin-top: 25rpx;
+  width: 90rpx;
+  height: 90rpx;
+  margin-top: 25px;
 }
-
+/* //动态数据样式 */
+.em_data{
+  width: 95%;
+  height: 180rpx;
+  margin: 160rpx auto 0;
+  border-bottom: 1rpx solid #eee;
+  display: flex;
+}
+/* 左边大图片 */
+.em_data .em_img{
+  width: 23%;
+  height: 180rpx;
+  text-align: center;
+  padding-left: 10rpx;
+}
+.em_data image{
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 10rpx;
+}
+/* 右边 */
+.em_user{
+  width: 74%;
+  height: 180rpx;
+  padding-left:  10rpx;
+  font-size: 30rpx;
+  color: #333;
+}
+.em_user image{
+  width: 30rpx;
+  height: 30rpx;
+  padding:5rpx 10rpx 0 0rpx;
+}
+.em_user .em_top{
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  white-space: nowrap;
+}
+.em_top text{
+  color: #f00;
+  font-size: 35rpx;
+}
+/* 获取来源行 */
+.em_center{
+  width: 100%;
+  height: 50rpx;
+  margin-top: 8rpx;
+  display: flex;
+  white-space: nowrap;
+}
+.em_center text{
+  color: #aaa;
+}
+.em_bottom{
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  margin-top: 10rpx;
+  white-space: nowrap;
+}
+.em_bottom text{
+  color: #777;
+}
+/* 
+底部按钮 */
 .btn {
   width: 100%;
   position: absolute;
@@ -67,8 +148,10 @@
   width: 55%;
   background: rgb(64, 220, 207);
 }
-/* 弹窗 */
-/* .zhezao {
+
+/*加速报账 弹窗 */
+
+.zhezao {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -76,86 +159,189 @@
   background: rgba(0, 0, 0, 0.4);
   overflow: hidden;
 }
+
+.t_w {
+  position: relative;
+}
+
 .tanchu_view {
   width: 90%;
-  margin: 40% auto 0;
+  margin: 35% auto;
+  overflow: hidden;
   background: url(https://mcs.lingdie.com/static/wechat/images/jxtc.png) no-repeat;
   background-size: 100% 100%;
   height: 500rpx;
-  border-radius: 10rpx;
-  position: relative;
-} */
- /* .tanchu_view .bq {
-  background: url(https://mcs.lingdie.com/static/wechat/images/jxerr.png)  no-repeat;
-  background-size: 100%;
-  height: 100rpx;
-}
- */
-
-
-.zhezao{
-  position:fixed;
-  width:100%;
-  height:100%;
-  top:0px;
-  background:rgba(0,0,0,0.4);
-  overflow: hidden;
-  }
-.t_w{
-  position:relative;
-  }
-.tanchu_view{
-  width: 90%;
-  margin:25% auto;
-  overflow: hidden;
-   background: url(https://mcs.lingdie.com/static/wechat/images/jxtc.png) no-repeat;
-  background-size: 100% 100%;
-  height: 500rpx;
   padding: 4rpx;
-  }
-  /* 抱歉，加速失败 */
-.txtsure{
- width: 70%;
- display: flex;
- background: url(https://mcs.lingdie.com/static/wechat/images/jxerr.png) no-repeat;
- background-size: 75% ;
- height: 80rpx;
- margin: 250rpx 0 0 180rpx;
 }
-.txt{
+
+/* 抱歉，加速失败 */
+
+.txtsure {
+  width: 70%;
+  display: flex;
+  background: url(https://mcs.lingdie.com/static/wechat/images/jxerr.png) no-repeat;
+  background-size: 75%;
+  height: 80rpx;
+  margin: 250rpx 0 0 180rpx;
+}
+
+.txt {
   font-size: 32rpx;
   color: #4a4a4a;
-  margin-left: 180rpx;
+  margin-left: 190rpx;
 }
 
 /*取消图标*/
-.t_image{
-  width:204rpx;
-  height:200rpx;
-  position: absolute;
-  bottom: -45%;
-  left:45%;
-  }
-/*取消图标*/
-.t_image1{
-  display:block;
-  width:65rpx;
-  height:65rpx;
-  }
 
-/*下面图标*/
-/* .t_image {
-  width: 205rpx;
+.t_image {
+  width: 204rpx;
   height: 200rpx;
   position: absolute;
   bottom: -45%;
   left: 45%;
-} */
+}
 
-/*图标*/
+/*取消图标*/
 
-/* .t_image1 {
+.t_image1 {
   display: block;
-  width: 60rpx;
-  height: 60rpx;
-} */
+  width: 65rpx;
+  height: 65rpx;
+}
+
+/*立即赚取经验值弹窗*/
+
+.liji {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.t_li {
+  position: relative;
+}
+
+.tanchu_box {
+  width: 90%;
+  margin: 30% auto;
+  overflow: hidden;
+  background: #fff;
+  height: 600rpx;
+}
+
+/*右上角图标*/
+
+.t_li .t_image {
+  position: absolute;
+  width: 65rpx;
+  height: 65rpx;
+  top: 27%;
+  left: 90%;
+}
+
+.t_li .title {
+  width: 100%;
+  text-align: center;
+  font-size: 35rpx;
+  font-weight: bold;
+  margin-top: 15rpx;
+}
+
+.txt image {
+  width: 100rpx;
+  height: 100rpx;
+  padding: 20rpx 0 0 110rpx;
+}
+
+.yaoq {
+  text-align: center;
+  color: #4a4a4a;
+}
+
+.ful {
+  color: #f00;
+  text-align: center;
+  font-size: 30rpx;
+  padding-top: 15rpx;
+}
+
+.sxu {
+  width: 100%;
+  margin-top: 25rpx;
+  display: flex;
+  padding-left: 100rpx;
+}
+
+.sxu .jt {
+  width: 40rpx;
+  height: 40rpx;
+  border: 1rpx solid #e9b2cb;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 25rpx;
+}
+
+.jt image {
+  width: 25rpx;
+  height: 25rpx;
+}
+
+.hen {
+  margin-top: -10rpx;
+}
+
+.hen image {
+  width: 50rpx;
+  height: 4rpx;
+}
+
+.text {
+  font-size: 26rpx;
+  color: #777;
+  text-align: center;
+  padding-top: 20rpx;
+}
+
+.shengc {
+  width: 80%;
+  height: 80rpx;
+  background: rgb(64, 220, 207);
+  margin: 30rpx auto;
+  text-align: center;
+  line-height: 80rpx;
+  color: #fff;
+  border-radius: 10rpx;
+  font-weight: bold;
+}
+/* 选择按钮样式 */
+ .rad checkbox-group{
+  width: 50rpx; 
+}
+
+/* 未选中的 背景样式 */
+.rad checkbox .wx-checkbox-input{
+    border-radius: 50%;/* 圆角 */
+    width: 40rpx; /* 背景的宽 */
+    height: 40rpx; /* 背景的高 */
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+    background: #42DBD3;
+    border-color:#42DBD3;
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+    border-radius: 50%;
+    width: 46rpx;
+    height: 46rpx;
+    line-height: 46rpx;
+    text-align: center;
+    font-size: 28rpx; /* 对勾大小 28rpx */
+    color: #fff; /* 对勾颜色 白色 */
+    background: transparent;
+    transform: translate(-50%, -50%) scale(1);
+    -webkit-transform: translate(-50%, -50%) scale(1);
+}

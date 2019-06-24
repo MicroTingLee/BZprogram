@@ -35,25 +35,25 @@
   <view class='mokuai'>
     <view class='kuai'>
       <!-- 第一块 -->
-      <navigator class='kuai1'>
+      <navigator class='kuai1' url='../mybzsuccess/mybzsuccess'>
         <image src='../../images/gr7.png'></image>
         <view class='kuai_pan'>报账成功</view>
         <view class='kuai_A'>
           <text>0</text> 张</view>
       </navigator>
       <!-- 第二块 -->
-      <navigator class='kuai1'>
+      <navigator class='kuai1' url='../mycumulative/mycumulative'>
         <view class='kuai_j'>
           <text>￥</text>0</view>
         <view class='leiji'>累计报账金额</view>
         <view class="canyu">
           <view class="kuai_Can">当前超过
-            <text class='pr'>0</text>%的用户参与报账
+            <text class='pr'>99</text>%的用户参与报账
           </view>
         </view>
       </navigator>
       <!-- 第三块 -->
-      <navigator class='kuai1'>
+      <navigator class='kuai1'url="../mybzspeed/mybzspeed">
         <image src='../../images/gr10.png'></image>
         <view class='kuai_pan'>加速报账</view>
         <view class='kuai_A'>

@@ -1,10 +1,49 @@
 <!--pages/idxcumul/idxcumul.wxml-->
-<!--   -->
+<!-- 首页累计报账金额  -->
 <view class='culmul'>
   <view class='culmul_content'>
     <view class='cul_img'>
-      <image src='../../images/jiasu8.png'></image>
+      <image src='../../images/kewpic.png'></image>
     </view>
-    <view class='cul_'></view>
+    <view class='cul_cont'>
+      <!-- 用户名行 -->
+      <view class='cul_head'>
+        <view class='name'>
+          <image src='../../images/kmy.png'></image>
+          <view>
+            <text>哈*</text>
+          </view>
+        </view>
+        <view class='time'>
+          <image src='../../images/jy04.png'></image>
+          <view>
+            <text>2019-06-03 11:55:04</text>
+          </view>
+        </view>
+      </view>
+      <!-- 券行 -->
+      <view class='cul_center'>
+        <view class='quan'>
+          <image src='../../images/quan.png'></image>
+          <view class='jine'>
+            <text>120.00元</text>
+          </view>
+        </view>
+        <view class='puto'>
+          <image src='../../images/bt.png'></image>
+          <view>
+          <text>普通报账</text>
+          </view>
+        </view>
+      </view>
+      <!-- 店铺行 -->
+      <view class='cul_bottom'>
+       <view class='dianpu'>
+       <image src='../../images/js05.png'></image></view>
+       <view>
+        <text>吾悦店</text>
+       </view>
+      </view>
+    </view>
   </view>
 </view>
